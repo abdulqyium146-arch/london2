@@ -59,7 +59,7 @@ export function generateBaseMetadata(): Metadata {
       canonical: SEO.siteUrl,
     },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || '',
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || 'e3216d8a594638b2',
     },
     other: {
       'geo.region': 'GB-ENG',
