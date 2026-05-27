@@ -18,7 +18,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { CoverageSection } from '@/components/sections/CoverageSection'
 import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
-import { generateServiceSchema } from '@/lib/seo/schema'
+import { generateServiceSchema, generateHomepageBreadcrumbSchema } from '@/lib/seo/schema'
 import { BUSINESS } from '@/lib/constants'
 import { generalFaqs, emergencyFaqs } from '@/data/faqs'
 import { services } from '@/data/services'
@@ -44,20 +44,23 @@ export const metadata: Metadata = {
     title: "London's #1 Emergency Locksmith | 24/7 | 30-Min Response",
     description:
       "Emergency locksmith available 24/7 across all London boroughs. 30-minute response, no call-out fee. Call 020 3900 4444.",
-    url: 'https://londonlocksmithpro.co.uk',
+    url: 'https://londonlocksmith.co',
     type: 'website',
-    siteName: 'London Locksmith Pro',
+    siteName: 'London Locksmith',
     locale: 'en_GB',
   },
   alternates: {
-    canonical: 'https://londonlocksmithpro.co.uk',
+    canonical: 'https://londonlocksmith.co',
   },
 }
 
-const emergencyServiceSchemas = services
-  .filter((s) => s.emergencyService)
-  .slice(0, 3)
-  .map((s) => generateServiceSchema(s))
+const emergencyServiceSchemas = [
+  generateHomepageBreadcrumbSchema(),
+  ...services
+    .filter((s) => s.emergencyService)
+    .slice(0, 3)
+    .map((s) => generateServiceSchema(s)),
+]
 
 const homepageFaqs = [...emergencyFaqs, ...generalFaqs.slice(0, 5)]
 const recentPosts = getRecentPosts(3)

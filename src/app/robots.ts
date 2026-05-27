@@ -6,10 +6,47 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/admin/',
+          '/_vercel/',
+          '/private/',
+          '/*.json$',
+        ],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
         disallow: ['/api/', '/_next/', '/admin/'],
       },
+      {
+        userAgent: 'Googlebot-Image',
+        allow: ['/images/', '/icons/'],
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/'],
+      },
+      {
+        userAgent: 'AhrefsBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'SemrushBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'DotBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'MJ12bot',
+        disallow: '/',
+      },
     ],
-    sitemap: 'https://londonlocksmithpro.co.uk/sitemap.xml',
-    host: 'https://londonlocksmithpro.co.uk',
+    sitemap: 'https://londonlocksmith.co/sitemap.xml',
+    host: 'https://londonlocksmith.co',
   }
 }

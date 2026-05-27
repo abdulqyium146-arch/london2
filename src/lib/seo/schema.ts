@@ -103,6 +103,7 @@ export function generateWebsiteSchema() {
     url: BASE_URL,
     name: BUSINESS.name,
     description: BUSINESS.tagline,
+    inLanguage: 'en-GB',
     publisher: {
       '@id': `${BASE_URL}/#organization`,
     },
@@ -110,10 +111,25 @@ export function generateWebsiteSchema() {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+        urlTemplate: `${BASE_URL}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
+  }
+}
+
+export function generateHomepageBreadcrumbSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: BASE_URL,
+      },
+    ],
   }
 }
 
@@ -174,11 +190,18 @@ export function generateLocalBusinessSchema(location: Location) {
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'Locksmith'],
+    '@id': `${BASE_URL}/locations/${location.slug}#localbusiness`,
     name: `${BUSINESS.name} - ${location.name}`,
     description: `Emergency locksmith services in ${location.name}, ${location.borough}. ${location.responseTime} response, available 24/7.`,
     url: `${BASE_URL}/locations/${location.slug}`,
     telephone: BUSINESS.phone,
     email: BUSINESS.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: location.name,
+      addressRegion: location.borough,
+      addressCountry: 'GB',
+    },
     areaServed: {
       '@type': 'City',
       name: location.name,

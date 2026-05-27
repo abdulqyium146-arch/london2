@@ -7,13 +7,19 @@ import {
 } from 'lucide-react'
 import { services, getService, getRelatedServices } from '@/data/services'
 import { locations } from '@/data/locations'
+import { postcodes } from '@/data/postcodes'
+import { stations } from '@/data/stations'
 import { reviews } from '@/data/reviews'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { ReviewsSlider } from '@/components/sections/ReviewsSlider'
 import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
-import { generateServiceSchema, generateFAQSchema } from '@/lib/seo/schema'
+import {
+  generateServiceSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+} from '@/lib/seo/schema'
 import { generateServiceMetadata } from '@/lib/seo/metadata'
 import { BUSINESS } from '@/lib/constants'
 
@@ -39,16 +45,19 @@ export default async function ServicePage({ params }: Props) {
 
   const relatedServices = getRelatedServices(service)
   const serviceReviews = reviews.filter((r) => r.service === serviceSlug).slice(0, 3)
-  const featuredLocations = locations.slice(0, 8)
-
-  const schemas = [
-    generateServiceSchema(service),
-    generateFAQSchema(service.faqs),
-  ]
+  const allLocations = locations
+  const featuredPostcodes = postcodes.slice(0, 10)
+  const featuredStations = stations.slice(0, 8)
 
   const breadcrumbs = [
     { name: 'Services', href: '/services' },
     { name: service.name, href: `/services/${service.slug}` },
+  ]
+
+  const schemas = [
+    generateServiceSchema(service),
+    generateFAQSchema(service.faqs),
+    generateBreadcrumbSchema([{ name: 'Home', href: '/' }, ...breadcrumbs]),
   ]
 
   return (
@@ -116,7 +125,6 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4">
-        {/* Long Description */}
         <section className="py-16 grid lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -156,11 +164,68 @@ export default async function ServicePage({ params }: Props) {
                 ))}
               </div>
             </div>
+
+            {/* All London areas for this service */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-white mb-5">
+                {service.name} Across London — All Areas
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {allLocations.map((loc) => (
+                  <Link
+                    key={loc.slug}
+                    href={`/${service.slug}-${loc.slug}`}
+                    className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+                  >
+                    <span className="text-slate-300 group-hover:text-orange-400 transition-colors">
+                      {service.shortName || service.name} {loc.name}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Postcode anchors */}
+            <div className="mt-10">
+              <h3 className="text-xl font-bold text-white mb-4">
+                {service.name} by Postcode
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {featuredPostcodes.map((pc) => (
+                  <Link
+                    key={pc.slug}
+                    href={`/locksmith-${pc.slug}`}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 hover:border-orange-500/40 hover:text-orange-400 transition-all text-sm"
+                  >
+                    <span className="text-orange-400 font-mono font-bold text-xs">{pc.code}</span>
+                    <span className="text-slate-400">{pc.area}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Station anchors */}
+            <div className="mt-10">
+              <h3 className="text-xl font-bold text-white mb-4">
+                {service.name} Near Tube &amp; Rail Stations
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {featuredStations.map((station) => (
+                  <Link
+                    key={station.slug}
+                    href={`/locksmith-near-${station.slug}`}
+                    className="text-sm px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/40 transition-all"
+                  >
+                    Near {station.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-5">
-            {/* Quick Contact */}
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-2xl p-6">
               <h3 className="text-white font-bold text-lg mb-3">Need Help Now?</h3>
               <p className="text-slate-300 text-sm mb-4">
@@ -181,7 +246,7 @@ export default async function ServicePage({ params }: Props) {
               <h3 className="text-white font-bold mb-3">Pricing</h3>
               <div className="text-3xl font-bold text-orange-400 mb-1">{service.priceRange}</div>
               <p className="text-slate-400 text-xs mb-4">
-                Fixed quote provided before we start. No hidden charges, no call-out fee.
+                Fixed quote before we start. No hidden charges, no call-out fee.
               </p>
               <div className="space-y-2 text-sm text-slate-300">
                 <div className="flex justify-between">
@@ -199,37 +264,39 @@ export default async function ServicePage({ params }: Props) {
               </div>
             </div>
 
-            {/* Areas */}
+            {/* Featured Areas */}
             <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-              <h3 className="text-white font-bold mb-3 flex items-center gap-2">
+              <h3 className="text-white font-bold mb-3 flex items-center gap-2 text-sm">
                 <MapPin className="w-4 h-4 text-orange-400" />
-                Areas Covered
+                Top Areas
               </h3>
-              <div className="flex flex-wrap gap-2">
-                {featuredLocations.map((loc) => (
+              <div className="space-y-1.5">
+                {allLocations.slice(0, 10).map((loc) => (
                   <Link
                     key={loc.slug}
                     href={`/${service.slug}-${loc.slug}`}
-                    className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-slate-400 hover:text-orange-400 hover:bg-orange-500/10 transition-all border border-gray-700"
+                    className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
                   >
-                    {loc.name}
+                    <span>{loc.name}</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
                   </Link>
                 ))}
               </div>
+              <Link
+                href="/locations"
+                className="flex items-center gap-1 text-xs text-orange-400 hover:text-orange-300 mt-3 transition-colors"
+              >
+                All locations <ArrowRight className="w-3 h-3" />
+              </Link>
             </div>
           </div>
         </section>
       </div>
 
-      {/* FAQ */}
       <FAQSection faqs={service.faqs} title={`${service.name} FAQs`} includeSchema={false} />
 
-      {/* Reviews */}
       {serviceReviews.length > 0 && (
-        <ReviewsSlider
-          title={`${service.name} Reviews`}
-          serviceSlug={serviceSlug}
-        />
+        <ReviewsSlider title={`${service.name} Reviews`} serviceSlug={serviceSlug} />
       )}
 
       {/* Related Services */}

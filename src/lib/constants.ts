@@ -12,9 +12,9 @@ export const BUSINESS = {
   mobileHref: 'tel:+447700123456',
   whatsapp: '447700123456',
   whatsappHref: 'https://wa.me/447700123456',
-  email: 'info@londonlocksmithpro.co.uk',
-  emailHref: 'mailto:info@londonlocksmithpro.co.uk',
-  website: 'https://londonlocksmithpro.co.uk',
+  email: 'info@londonlocksmith.co',
+  emailHref: 'mailto:info@londonlocksmith.co',
+  website: 'https://londonlocksmith.co',
   address: {
     street: '247 High Street',
     area: 'Walthamstow',
@@ -29,11 +29,11 @@ export const BUSINESS = {
     lng: -0.0214,
   },
   social: {
-    google: 'https://g.page/londonlocksmithpro',
-    facebook: 'https://www.facebook.com/londonlocksmithpro',
-    instagram: 'https://www.instagram.com/londonlocksmithpro',
-    twitter: 'https://twitter.com/londonlockpro',
-    trustpilot: 'https://www.trustpilot.com/review/londonlocksmithpro.co.uk',
+    google: 'https://g.page/londonlocksmith',
+    facebook: 'https://www.facebook.com/londonlocksmith',
+    instagram: 'https://www.instagram.com/londonlocksmith',
+    twitter: 'https://twitter.com/londonlocksmith',
+    trustpilot: 'https://www.trustpilot.com/review/londonlocksmith.co',
   },
   rating: {
     value: '4.9',
@@ -66,14 +66,14 @@ export const BUSINESS = {
 } as const
 
 export const SEO = {
-  siteName: 'London Locksmith Pro',
-  siteUrl: 'https://londonlocksmithpro.co.uk',
+  siteName: 'London Locksmith',
+  siteUrl: 'https://londonlocksmith.co',
   defaultTitle: "London's #1 Emergency Locksmith | 24/7 | 30-Min Response",
-  titleTemplate: '%s | London Locksmith Pro',
+  titleTemplate: '%s | London Locksmith',
   defaultDescription:
     'Emergency locksmith in London available 24/7. 30-minute response across all London boroughs. No call-out fee. Fully insured. Call 020 3900 4444 now.',
   defaultOgImage: '/images/og-default.jpg',
-  twitterHandle: '@londonlockpro',
+  twitterHandle: '@londonlocksmith',
   twitterCardType: 'summary_large_image',
   locale: 'en_GB',
   themeColor: '#0A1628',

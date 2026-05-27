@@ -16,9 +16,19 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-geist-sans',
+  preload: true,
 })
 
-export const metadata: Metadata = generateBaseMetadata()
+export const metadata: Metadata = {
+  ...generateBaseMetadata(),
+  alternates: {
+    canonical: 'https://londonlocksmith.co',
+    languages: {
+      'en-GB': 'https://londonlocksmith.co',
+      'x-default': 'https://londonlocksmith.co',
+    },
+  },
+}
 
 export default function RootLayout({
   children,
@@ -30,14 +40,39 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0A1628" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* DNS prefetch + preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+
+        {/* Geo tags for local SEO */}
+        <meta name="geo.region" content="GB-ENG" />
+        <meta name="geo.placename" content="London, United Kingdom" />
+        <meta name="geo.position" content="51.5074;-0.1278" />
+        <meta name="ICBM" content="51.5074, -0.1278" />
+
+        {/* Indexing */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://londonlocksmith.co" />
+
+        {/* Hreflang */}
+        <link rel="alternate" hrefLang="en-GB" href="https://londonlocksmith.co" />
+        <link rel="alternate" hrefLang="x-default" href="https://londonlocksmith.co" />
       </head>
       <body className="min-h-screen bg-[#0A1628] text-slate-100 antialiased">
         <SchemaMarkup schemas={schemas} />

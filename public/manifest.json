@@ -1,6 +1,6 @@
 {
-  "name": "London Locksmith Pro",
-  "short_name": "LocksmithPro",
+  "name": "London Locksmith",
+  "short_name": "LondonLocksmith",
   "description": "London's emergency locksmith — 24/7, 30-minute response",
   "start_url": "/",
   "display": "standalone",

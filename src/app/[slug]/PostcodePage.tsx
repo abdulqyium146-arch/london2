@@ -1,12 +1,18 @@
 import Link from 'next/link'
-import { Phone, MapPin, Clock, CheckCircle2, ChevronRight, Shield, Star } from 'lucide-react'
+import { Phone, MapPin, Clock, CheckCircle2, ChevronRight, Shield, Star, ArrowRight } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
-import { generatePostcodeSchema, generateFAQSchema } from '@/lib/seo/schema'
+import {
+  generatePostcodeSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+} from '@/lib/seo/schema'
 import { BUSINESS } from '@/lib/constants'
 import { services } from '@/data/services'
+import { postcodes } from '@/data/postcodes'
+import { stations } from '@/data/stations'
 import { generalFaqs } from '@/data/faqs'
 import type { PostcodeArea, FAQ } from '@/types'
 
@@ -19,7 +25,7 @@ export function PostcodePage({ postcode, slug }: PostcodePageProps) {
   const postcodeFaqs: FAQ[] = [
     {
       question: `Is there a locksmith available in ${postcode.code} right now?`,
-      answer: `Yes. London Locksmith Pro operates 24/7 across ${postcode.code} (${postcode.area}) and all surrounding London postcodes. We have locksmiths stationed across ${postcode.borough} for rapid response. Call ${BUSINESS.phone} now for immediate assistance.`,
+      answer: `Yes. London Locksmith operates 24/7 across ${postcode.code} (${postcode.area}) and all surrounding London postcodes. We have locksmiths stationed across ${postcode.borough} for rapid response. Call ${BUSINESS.phone} now for immediate assistance.`,
     },
     {
       question: `How quickly can a locksmith reach ${postcode.code}?`,
@@ -32,16 +38,28 @@ export function PostcodePage({ postcode, slug }: PostcodePageProps) {
     ...generalFaqs.slice(0, 3),
   ]
 
-  const emergencyServices = services.filter((s) => s.emergencyService).slice(0, 6)
-  const schemas = [
-    generatePostcodeSchema(postcode),
-    generateFAQSchema(postcodeFaqs.slice(0, 5)),
-  ]
+  const allServices = services
+  const emergencyServices = services.filter((s) => s.emergencyService)
+  const standardServices = services.filter((s) => !s.emergencyService)
+
+  // Nearby postcodes (all except current)
+  const nearbyPostcodes = postcodes.filter((p) => p.code !== postcode.code).slice(0, 12)
+
+  // Stations near this postcode's location
+  const nearbyStations = stations
+    .filter((s) => s.locationSlug === postcode.locationSlug)
+    .slice(0, 6)
 
   const breadcrumbs = [
     { name: 'Locations', href: '/locations' },
     { name: postcode.area, href: `/locations/${postcode.locationSlug}` },
     { name: postcode.code, href: `/${slug}` },
+  ]
+
+  const schemas = [
+    generatePostcodeSchema(postcode),
+    generateFAQSchema(postcodeFaqs.slice(0, 5)),
+    generateBreadcrumbSchema([{ name: 'Home', href: '/' }, ...breadcrumbs]),
   ]
 
   return (
@@ -131,72 +149,163 @@ export function PostcodePage({ postcode, slug }: PostcodePageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4">
-        <section className="py-16">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Locksmith Services in {postcode.code} ({postcode.area})
-          </h2>
-          <p className="text-slate-300 mb-8 max-w-2xl">
-            {postcode.description} Our locksmiths cover every street and property in the{' '}
-            {postcode.code} postcode area, providing fast, professional locksmith services
-            around the clock.
-          </p>
+        <section className="py-16 grid lg:grid-cols-3 gap-10">
+          <div className="lg:col-span-2 space-y-12">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Locksmith Services in {postcode.code} ({postcode.area})
+              </h2>
+              <p className="text-slate-300 leading-relaxed">
+                {postcode.description} Our locksmiths cover every street and property in the{' '}
+                {postcode.code} postcode area, providing fast, professional locksmith services
+                around the clock.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            {emergencyServices.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/${service.slug}-${postcode.locationSlug}`}
-                className="group flex items-center justify-between p-4 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all"
-              >
-                <div>
-                  <div className="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">
-                    {service.name} — {postcode.code}
+            {/* Emergency Services */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-5">
+                Emergency Locksmith Services — {postcode.code}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {emergencyServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/${service.slug}-${postcode.locationSlug}`}
+                    className="group flex items-center justify-between p-4 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all"
+                  >
+                    <div>
+                      <div className="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">
+                        {service.name} — {postcode.code}
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">From £{service.priceFrom} · 24/7</div>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-orange-400" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* All services */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-5">
+                All Locksmith Services — {postcode.code}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {standardServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/${service.slug}-${postcode.locationSlug}`}
+                    className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+                  >
+                    <span className="text-slate-300 group-hover:text-orange-400 transition-colors">
+                      {service.name} in {postcode.area}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Why Choose Us */}
+            <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
+              <h3 className="text-white font-bold text-lg mb-4">
+                Why Choose Us for {postcode.code}?
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {[
+                  `Local locksmiths based in ${postcode.district}`,
+                  `${postcode.responseTime} guaranteed response to ${postcode.code}`,
+                  `Familiar with ${postcode.borough} property types`,
+                  'No call-out fee',
+                  'Fully insured and DBS checked',
+                  '24/7 emergency availability',
+                ].map((point) => (
+                  <div key={point} className="flex items-center gap-2 text-slate-300 text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    {point}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">From £{service.priceFrom} · 24/7</div>
-                </div>
-                <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-orange-400 transition-colors" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Local context */}
-          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6 mb-8">
-            <h3 className="text-white font-bold text-lg mb-4">
-              Why Choose Us for {postcode.code}?
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                `Local locksmiths based in ${postcode.district}`,
-                `${postcode.responseTime} guaranteed response to ${postcode.code}`,
-                `Familiar with ${postcode.borough} property types`,
-                'No call-out fee',
-                'Fully insured and DBS checked',
-                '24/7 emergency availability',
-              ].map((point) => (
-                <div key={point} className="flex items-center gap-2 text-slate-300 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  {point}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-slate-400 mb-4">
-              Also serving nearby postcodes:
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {['E10', 'E11', 'E15', 'E6', 'E7', 'N9', 'N15', 'N17', 'IG1', 'IG11'].map((code) => (
-                code !== postcode.code && (
+          {/* Sidebar */}
+          <div className="space-y-5">
+            {/* CTA */}
+            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-2xl p-6">
+              <h3 className="text-white font-bold text-lg mb-3">Emergency Locksmith {postcode.code}</h3>
+              <p className="text-slate-300 text-sm mb-4">{postcode.responseTime} response. Available now.</p>
+              <Link
+                href={BUSINESS.phoneHref}
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold"
+              >
+                <Phone className="w-4 h-4" />
+                {BUSINESS.phone}
+              </Link>
+            </div>
+
+            {/* Parent location link */}
+            <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+              <h3 className="text-white font-bold mb-3 text-sm">Browse Area</h3>
+              <div className="space-y-2">
+                <Link
+                  href={`/locations/${postcode.locationSlug}`}
+                  className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
+                >
+                  <span>Locksmith {postcode.area}</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+                <Link
+                  href="/areas-we-cover"
+                  className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
+                >
+                  <span>All Areas We Cover</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+                <Link
+                  href="/services"
+                  className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
+                >
+                  <span>All Services</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Station links */}
+            {nearbyStations.length > 0 && (
+              <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+                <h3 className="text-white font-bold mb-3 text-sm">Nearby Stations</h3>
+                <div className="space-y-2">
+                  {nearbyStations.map((station) => (
+                    <Link
+                      key={station.slug}
+                      href={`/locksmith-near-${station.slug}`}
+                      className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
+                    >
+                      <span>Near {station.name}</span>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Nearby postcodes */}
+            <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+              <h3 className="text-white font-bold mb-3 text-sm">Nearby Postcodes</h3>
+              <div className="flex flex-wrap gap-1.5">
+                {nearbyPostcodes.map((pc) => (
                   <Link
-                    key={code}
-                    href={`/locksmith-${code.toLowerCase()}`}
-                    className="px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-sm text-slate-400 hover:text-orange-400 hover:border-orange-500/40 transition-all"
+                    key={pc.slug}
+                    href={`/locksmith-${pc.slug}`}
+                    className="text-xs px-2.5 py-1 rounded-full bg-gray-800 border border-gray-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/40 transition-all font-mono"
                   >
-                    {code}
+                    {pc.code}
                   </Link>
-                )
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

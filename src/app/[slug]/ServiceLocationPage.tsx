@@ -1,17 +1,24 @@
 import Link from 'next/link'
 import {
   Phone, MapPin, Clock, CheckCircle2, ChevronRight,
-  AlertTriangle, Shield, Star, Train,
+  AlertTriangle, Shield, Star, Train, ArrowRight,
 } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { ReviewsSlider } from '@/components/sections/ReviewsSlider'
 import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
-import { generateServiceSchema, generateLocalBusinessSchema, generateFAQSchema } from '@/lib/seo/schema'
+import {
+  generateServiceSchema,
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+} from '@/lib/seo/schema'
 import { BUSINESS } from '@/lib/constants'
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
+import { postcodes } from '@/data/postcodes'
+import { stations } from '@/data/stations'
 import type { Service, Location, FAQ } from '@/types'
 
 interface ServiceLocationPageProps {
@@ -28,34 +35,43 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
     },
     {
       question: `How much does ${service.name} cost in ${location.name}?`,
-      answer: `${service.name} in ${location.name} costs ${service.priceRange}. We provide a transparent fixed quote before arriving — no hidden charges and no call-out fee. The exact price depends on your specific situation, which we&apos;ll discuss when you call.`,
+      answer: `${service.name} in ${location.name} costs ${service.priceRange}. We provide a transparent fixed quote before arriving — no hidden charges and no call-out fee. The exact price depends on your specific situation, which we'll discuss when you call.`,
     },
     {
       question: `Is your ${service.name} service available 24/7 in ${location.name}?`,
-      answer: `Yes. Our ${service.name} service in ${location.name} is available ${service.availability}${service.emergencyService ? `, including bank holidays and Christmas` : ''}. Call ${BUSINESS.phone} any time for immediate assistance.`,
+      answer: `Yes. Our ${service.name} service in ${location.name} is available ${service.availability}${service.emergencyService ? ', including bank holidays and Christmas' : ''}. Call ${BUSINESS.phone} any time for immediate assistance.`,
     },
     ...service.faqs.slice(0, 3),
   ]
 
+  // All services for this location (full internal linking grid)
+  const otherServices = services.filter((s) => s.slug !== service.slug)
   const relatedServiceLocations = services
     .filter((s) => service.relatedServices.includes(s.slug))
-    .slice(0, 4)
+    .slice(0, 5)
 
   const nearbyLocationLinks = location.nearbyAreaSlugs
-    .map((slug) => locations.find((l) => l.slug === slug))
+    .map((s) => locations.find((l) => l.slug === s))
     .filter(Boolean)
-    .slice(0, 4) as Location[]
+    .slice(0, 6) as Location[]
 
-  const schemas = [
-    generateServiceSchema(service, location),
-    generateLocalBusinessSchema(location),
-    generateFAQSchema(combinedFaqs.slice(0, 5)),
-  ]
+  // Postcodes for this location
+  const locationPostcodes = postcodes.filter((p) => location.postcodes.includes(p.code))
+
+  // Stations near this location
+  const locationStations = stations.filter((s) => location.stationSlugs?.includes(s.slug))
 
   const breadcrumbs = [
     { name: 'Services', href: '/services' },
     { name: service.name, href: `/services/${service.slug}` },
     { name: location.name, href: `/${slug}` },
+  ]
+
+  const schemas = [
+    generateServiceSchema(service, location),
+    generateLocalBusinessSchema(location),
+    generateFAQSchema(combinedFaqs.slice(0, 5)),
+    generateBreadcrumbSchema([{ name: 'Home', href: '/' }, ...breadcrumbs]),
   ]
 
   return (
@@ -90,7 +106,6 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                 time. Fully insured, no call-out fee.
               </p>
 
-              {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-3 mb-8">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
                   <Clock className="w-5 h-5 text-orange-400 mx-auto mb-1" />
@@ -118,7 +133,6 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
               </Link>
             </div>
 
-            {/* Right: Service Features */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h2 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-400" />
@@ -140,8 +154,8 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
       <div className="max-w-7xl mx-auto px-4">
         <section className="py-16 grid lg:grid-cols-3 gap-10">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Service Description */}
+          <div className="lg:col-span-2 space-y-10">
+            {/* Description */}
             <div>
               <h2 className="text-3xl font-bold text-white mb-4">
                 {service.name} in {location.name} — Everything You Need to Know
@@ -155,7 +169,7 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                   in the {location.postcodes.join(' and ')} postcodes within {location.responseTime}.
                 </p>
                 <p>
-                  Whether you&apos;re locked out at {location.stations[0] || 'your local station'}{' '}
+                  Whether you&apos;re locked out near {location.stations[0] || 'the local station'}{' '}
                   or need a {service.name.toLowerCase()} in the residential streets of{' '}
                   {location.borough}, our professional service is just one call away.
                 </p>
@@ -192,7 +206,7 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
               </div>
             </div>
 
-            {/* Local Area Context */}
+            {/* Why Choose Us */}
             <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
               <h3 className="text-white font-bold text-lg mb-4">
                 Why Choose Us for {service.name} in {location.name}?
@@ -202,7 +216,7 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                   `Local locksmith covering all ${location.postcodes.join(', ')} postcodes`,
                   `${location.responseTime} average response time to ${location.name}`,
                   `Familiar with ${location.borough} properties and lock types`,
-                  'No call-out fee for any location in ' + location.name,
+                  `No call-out fee for any location in ${location.name}`,
                   `Nearest locksmith to ${location.stations[0] || location.name + ' station'}`,
                   '24/7 availability including bank holidays',
                 ].map((point) => (
@@ -213,6 +227,50 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                 ))}
               </div>
             </div>
+
+            {/* All services in this location */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-5">
+                All Locksmith Services in {location.name}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {otherServices.map((svc) => (
+                  <Link
+                    key={svc.slug}
+                    href={`/${svc.slug}-${location.slug}`}
+                    className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+                  >
+                    <span className="text-slate-300 group-hover:text-orange-400 transition-colors">
+                      {svc.name} {location.name}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Same service in nearby locations */}
+            {nearbyLocationLinks.length > 0 && (
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-5">
+                  {service.name} in Nearby Areas
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {nearbyLocationLinks.map((nearby) => (
+                    <Link
+                      key={nearby.slug}
+                      href={`/${service.slug}-${nearby.slug}`}
+                      className="group flex items-center gap-2 p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                      <span className="text-slate-300 group-hover:text-orange-400 transition-colors">
+                        {service.name} in {nearby.name}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Sidebar */}
@@ -249,7 +307,30 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
               </Link>
             </div>
 
-            {/* Other Services in Location */}
+            {/* Parent page links */}
+            <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+              <h3 className="text-white font-bold mb-3 text-sm">Quick Navigation</h3>
+              <div className="space-y-2">
+                <Link href={`/services/${service.slug}`} className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group">
+                  <span>All {service.name} Areas</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+                <Link href={`/locations/${location.slug}`} className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group">
+                  <span>All Services in {location.name}</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+                <Link href="/services" className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group">
+                  <span>All Services</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+                <Link href="/locations" className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group">
+                  <span>All Locations</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Related services in same location */}
             {relatedServiceLocations.length > 0 && (
               <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
                 <h3 className="text-white font-bold mb-3 text-sm">
@@ -260,49 +341,53 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                     <Link
                       key={relService.slug}
                       href={`/${relService.slug}-${location.slug}`}
-                      className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors"
+                      className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
                     >
                       <span>{relService.name}</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
                     </Link>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Nearby Areas */}
-            {nearbyLocationLinks.length > 0 && (
+            {/* Postcodes */}
+            {locationPostcodes.length > 0 && (
               <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
-                <h3 className="text-white font-bold mb-3 text-sm">
-                  {service.name} Nearby
-                </h3>
+                <h3 className="text-white font-bold mb-3 text-sm">Postcode Coverage</h3>
                 <div className="space-y-2">
-                  {nearbyLocationLinks.map((nearbyLoc) => (
+                  {locationPostcodes.map((postcode) => (
                     <Link
-                      key={nearbyLoc.slug}
-                      href={`/${service.slug}-${nearbyLoc.slug}`}
-                      className="flex items-center gap-2 text-sm text-slate-400 hover:text-orange-400 transition-colors"
+                      key={postcode.code}
+                      href={`/locksmith-${postcode.slug}`}
+                      className="flex items-center justify-between text-sm hover:text-orange-400 transition-colors group"
                     >
-                      <MapPin className="w-3.5 h-3.5 text-slate-600" />
-                      {service.name} {nearbyLoc.name}
+                      <span className="text-orange-400 font-mono font-bold">{postcode.code}</span>
+                      <span className="text-slate-400 group-hover:text-orange-400">{postcode.area}</span>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
                     </Link>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Stations */}
-            {location.stations.length > 0 && (
+            {/* Station links */}
+            {locationStations.length > 0 && (
               <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
                 <h3 className="text-white font-bold mb-3 text-sm flex items-center gap-2">
                   <Train className="w-4 h-4 text-slate-400" />
-                  {location.name} Stations
+                  Locksmith Near Stations
                 </h3>
-                <div className="space-y-1">
-                  {location.stations.map((station) => (
-                    <div key={station} className="text-sm text-slate-400">
-                      {station}
-                    </div>
+                <div className="space-y-2">
+                  {locationStations.map((station) => (
+                    <Link
+                      key={station.slug}
+                      href={`/locksmith-near-${station.slug}`}
+                      className="flex items-center justify-between text-sm text-slate-400 hover:text-orange-400 transition-colors group"
+                    >
+                      <span>{station.name}</span>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400" />
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -311,10 +396,8 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
         </section>
       </div>
 
-      {/* Reviews */}
       <ReviewsSlider title={`${service.name} Reviews`} serviceSlug={service.slug} />
 
-      {/* FAQ */}
       <FAQSection
         faqs={combinedFaqs}
         title={`${service.name} ${location.name} FAQs`}
