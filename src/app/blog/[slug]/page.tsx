@@ -1,0 +1,180 @@
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { ArrowLeft, Clock, Calendar, Tag } from 'lucide-react'
+import { blogPosts, getBlogPost } from '@/data/blog-posts'
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
+import { FAQSection } from '@/components/sections/FAQSection'
+import { CTASection } from '@/components/sections/CTASection'
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
+import { generateFAQSchema } from '@/lib/seo/schema'
+import { generateBlogMetadata } from '@/lib/seo/metadata'
+import { formatDate } from '@/lib/utils'
+
+interface Props {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.slug }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = getBlogPost(slug)
+  if (!post) return {}
+  return generateBlogMetadata(post)
+}
+
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = getBlogPost(slug)
+  if (!post) notFound()
+
+  const relatedPosts = blogPosts
+    .filter((p) => post.relatedPosts.includes(p.slug))
+    .slice(0, 3)
+
+  const schemas = post.faqs.length > 0 ? [generateFAQSchema(post.faqs)] : []
+
+  const breadcrumbs = [
+    { name: 'Blog', href: '/blog' },
+    { name: post.title, href: `/blog/${post.slug}` },
+  ]
+
+  return (
+    <>
+      {schemas.length > 0 && <SchemaMarkup schemas={schemas} />}
+
+      {/* Hero */}
+      <section className="relative py-16 px-4 bg-hero-gradient">
+        <div className="absolute inset-0 bg-glow-orange opacity-20" />
+        <div className="relative max-w-4xl mx-auto">
+          <Breadcrumbs items={breadcrumbs} className="mb-8" />
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-xs text-orange-400 font-semibold uppercase tracking-wide px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30">
+              {post.category}
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400">
+            <div className="flex items-center gap-1.5">
+              <Calendar className="w-4 h-4" />
+              <span>{formatDate(post.publishDate)}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4" />
+              <span>{post.readTime}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-4 gap-10">
+          {/* Article */}
+          <article className="lg:col-span-3">
+            {/* Excerpt */}
+            <div className="bg-orange-500/10 border border-orange-500/20 rounded-2xl p-5 mb-8">
+              <p className="text-orange-200 font-medium leading-relaxed">{post.excerpt}</p>
+            </div>
+
+            {/* Content */}
+            <div className="text-slate-300 space-y-4 leading-relaxed">
+              {post.content.split('\n\n').map((block, i) => {
+                const trimmed = block.trim()
+                if (!trimmed) return null
+                if (trimmed.startsWith('# ')) {
+                  return <h2 key={i} className="text-3xl font-bold text-white mt-8 mb-4">{trimmed.slice(2)}</h2>
+                }
+                if (trimmed.startsWith('## ')) {
+                  return <h3 key={i} className="text-2xl font-bold text-white mt-6 mb-3">{trimmed.slice(3)}</h3>
+                }
+                if (trimmed.startsWith('### ')) {
+                  return <h4 key={i} className="text-xl font-semibold text-white mt-4 mb-2">{trimmed.slice(4)}</h4>
+                }
+                if (trimmed.startsWith('1. ') || trimmed.startsWith('- ')) {
+                  const items = trimmed.split('\n').filter(Boolean)
+                  return (
+                    <ul key={i} className="space-y-2">
+                      {items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2">
+                          <span className="text-orange-400 mt-1.5 flex-shrink-0">•</span>
+                          <span>{item.replace(/^[\d]+\.\s|^-\s/, '').replace(/\*\*(.*?)\*\*/g, '$1')}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )
+                }
+                return (
+                  <p key={i} dangerouslySetInnerHTML={{
+                    __html: trimmed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
+                  }} />
+                )
+              })}
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-800">
+              {post.tags.map((tag) => (
+                <div key={tag} className="flex items-center gap-1 px-3 py-1 rounded-full bg-gray-800 text-xs text-slate-400">
+                  <Tag className="w-3 h-3" />
+                  {tag}
+                </div>
+              ))}
+            </div>
+          </article>
+
+          {/* Sidebar */}
+          <aside className="space-y-6">
+            <div className="sticky top-28 space-y-5">
+              <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-2xl p-5">
+                <h3 className="text-white font-bold mb-2">Need a Locksmith?</h3>
+                <p className="text-slate-300 text-sm mb-4">Call us 24/7 for immediate help.</p>
+                <Link
+                  href="tel:+442039004444"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm"
+                >
+                  020 3900 4444
+                </Link>
+              </div>
+
+              {relatedPosts.length > 0 && (
+                <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+                  <h3 className="text-white font-bold mb-4 text-sm">Related Articles</h3>
+                  <div className="space-y-3">
+                    {relatedPosts.map((related) => (
+                      <Link
+                        key={related.slug}
+                        href={`/blog/${related.slug}`}
+                        className="block text-slate-400 text-sm hover:text-orange-400 transition-colors leading-snug"
+                      >
+                        {related.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <Link
+                href="/blog"
+                className="flex items-center gap-2 text-slate-400 hover:text-orange-400 transition-colors text-sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to Blog
+              </Link>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      {post.faqs.length > 0 && (
+        <FAQSection faqs={post.faqs} title="Frequently Asked Questions" includeSchema={false} />
+      )}
+
+      <CTASection variant="minimal" />
+    </>
+  )
+}
