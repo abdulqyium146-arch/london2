@@ -35,6 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core pages
   entries.push(
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    // Money page — exact keyword target
+    { url: `${BASE_URL}/residential-locksmith-london`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/locations`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/areas-we-cover`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },

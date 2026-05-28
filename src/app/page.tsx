@@ -289,6 +289,69 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Residential Locksmith London — internal link section */}
+      <section className="py-14 px-4 bg-[#060E1A]/60" aria-label="24/7 Residential Locksmith London">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-[#0A1628] to-[#111827] border border-orange-500/20 rounded-3xl p-8 md:p-10">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">
+                  Home Security Specialists
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  24/7 Residential Locksmith London
+                </h2>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Need a <strong className="text-white">residential locksmith in London</strong> available around the clock?
+                  Our dedicated home locksmith team covers emergency lockouts, lock repairs,
+                  security upgrades, and more — across all 32 boroughs. Fixed price, no call-out fee,
+                  30-minute response.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {[
+                    '24/7 — Day & Night',
+                    '30-Min Response',
+                    'No Call-Out Fee',
+                    'Fixed Price',
+                  ].map((badge) => (
+                    <span key={badge} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  href="/residential-locksmith-london"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold hover:scale-105 transition-all duration-300"
+                >
+                  See Residential Services
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: 'House Lockouts', href: '/services/house-lockout' },
+                  { label: 'Lock Repair', href: '/services/lock-repair' },
+                  { label: 'Lock Replacement', href: '/services/lock-replacement' },
+                  { label: 'Burglary Repair', href: '/services/burglary-repair' },
+                  { label: 'Anti-Snap Upgrades', href: '/services/security-upgrades' },
+                  { label: 'Smart Lock Fitting', href: '/services/smart-lock-installation' },
+                ].map(({ label, href }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="group flex items-center gap-2 p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 flex-shrink-0" />
+                    <span className="text-slate-300 group-hover:text-orange-400 transition-colors">{label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews */}
       <ReviewsSlider title="What Our London Customers Say" />
 

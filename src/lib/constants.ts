@@ -88,6 +88,7 @@ export const NAVIGATION = {
       children: [
         { label: 'Emergency Locksmith', href: '/services/emergency-locksmith' },
         { label: '24 Hour Locksmith', href: '/services/24-hour-locksmith' },
+        { label: '24/7 Residential Locksmith', href: '/residential-locksmith-london' },
         { label: 'House Lockout', href: '/services/house-lockout' },
         { label: 'Burglary Repair', href: '/services/burglary-repair' },
         { label: 'UPVC Door Repair', href: '/services/upvc-door-repair' },

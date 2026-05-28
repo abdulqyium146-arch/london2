@@ -15,6 +15,7 @@ import { locations } from '@/data/locations'
 import { postcodes } from '@/data/postcodes'
 
 const POPULAR_SEARCHES: { label: string; href: string }[] = [
+  { label: '24/7 Residential Locksmith London', href: '/residential-locksmith-london' },
   { label: 'Locksmith E17', href: '/locksmith-e17' },
   { label: 'Locksmith E10', href: '/locksmith-e10' },
   { label: 'Locksmith RM8', href: '/locksmith-rm8' },
@@ -25,7 +26,6 @@ const POPULAR_SEARCHES: { label: string; href: string }[] = [
   { label: 'Burglary Repair London', href: '/services/burglary-repair' },
   { label: 'Locksmith Near Stratford Station', href: '/locksmith-near-stratford-station' },
   { label: 'Smart Lock Installation London', href: '/services/smart-lock-installation' },
-  { label: 'Commercial Locksmith London', href: '/services/commercial-locksmith' },
   { label: 'Lock Replacement London', href: '/services/lock-replacement' },
 ]
 
