@@ -419,6 +419,7 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
         faqs={combinedFaqs}
         title={`${service.name} ${location.name} FAQs`}
         subtitle={`Common questions about ${service.name.toLowerCase()} in ${location.name}.`}
+        includeSchema={false}
       />
 
       <CTASection

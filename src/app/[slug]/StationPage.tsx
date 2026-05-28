@@ -344,6 +344,7 @@ export function StationPage({ station, slug }: StationPageProps) {
       <FAQSection
         faqs={stationFaqs}
         title={`Locksmith Near ${station.name} — FAQs`}
+        includeSchema={false}
       />
 
       <CTASection

@@ -363,6 +363,7 @@ export default function HomePage() {
         faqs={homepageFaqs}
         title="Common Questions About London Locksmith Services"
         subtitle="Everything you need to know about our locksmith service in London."
+        includeSchema={false}
       />
 
       {/* Blog Preview */}

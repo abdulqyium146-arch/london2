@@ -35,24 +35,18 @@ export function FAQSection({
           {subtitle && <p className="text-slate-400">{subtitle}</p>}
         </div>
 
-        <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="border border-gray-800 rounded-2xl overflow-hidden"
-              itemScope
-              itemProp="mainEntity"
-              itemType="https://schema.org/Question"
             >
               <button
                 className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left bg-[#111827] hover:bg-[#1a2332] transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 aria-expanded={openIndex === index}
               >
-                <span
-                  className="font-semibold text-white text-sm md:text-base"
-                  itemProp="name"
-                >
+                <span className="font-semibold text-white text-sm md:text-base">
                   {faq.question}
                 </span>
                 <div
@@ -72,16 +66,8 @@ export function FAQSection({
               </button>
 
               {openIndex === index && (
-                <div
-                  className="px-6 pb-5 bg-[#111827] border-t border-gray-800/50"
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <p
-                    className="text-slate-300 text-sm md:text-base leading-relaxed pt-4"
-                    itemProp="text"
-                  >
+                <div className="px-6 pb-5 bg-[#111827] border-t border-gray-800/50">
+                  <p className="text-slate-300 text-sm md:text-base leading-relaxed pt-4">
                     {faq.answer}
                   </p>
                 </div>

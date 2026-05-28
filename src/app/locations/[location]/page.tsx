@@ -354,6 +354,7 @@ export default async function LocationPage({ params }: Props) {
         faqs={locationFaqs}
         title={`${location.name} Locksmith FAQs`}
         subtitle={`Common questions about our locksmith service in ${location.name}.`}
+        includeSchema={false}
       />
 
       <CTASection

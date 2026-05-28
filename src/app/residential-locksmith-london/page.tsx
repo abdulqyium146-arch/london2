@@ -650,6 +650,7 @@ export default function ResidentialLocksmithLondonPage() {
         faqs={residentialFaqs}
         title="24/7 Residential Locksmith London — FAQs"
         subtitle="Common questions about our residential locksmith service in London."
+        includeSchema={false}
       />
 
       {/* Final CTA */}

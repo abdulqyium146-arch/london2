@@ -315,6 +315,7 @@ export function PostcodePage({ postcode, slug }: PostcodePageProps) {
         faqs={postcodeFaqs}
         title={`Locksmith ${postcode.code} FAQs`}
         subtitle={`Common questions about locksmith services in ${postcode.code} ${postcode.area}.`}
+        includeSchema={false}
       />
 
       <CTASection
