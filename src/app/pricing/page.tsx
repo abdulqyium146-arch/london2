@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, CheckCircle2, AlertTriangle, Clock } from 'lucide-react'
+import { Phone, CheckCircle2, AlertTriangle, Clock, ChevronRight } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { CTASection } from '@/components/sections/CTASection'
 import { FAQSection } from '@/components/sections/FAQSection'
-import { BUSINESS } from '@/lib/constants'
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
+import { generateWebPageSchema, generateBreadcrumbSchema } from '@/lib/seo/schema'
+import { BUSINESS, SEO } from '@/lib/constants'
 import { services } from '@/data/services'
+import { locations } from '@/data/locations'
 import { pricingFaqs } from '@/data/faqs'
 
 export const metadata: Metadata = {
@@ -13,27 +16,42 @@ export const metadata: Metadata = {
   description:
     'Clear, transparent locksmith prices in London. Emergency call-outs from £49, lock changes from £80. No call-out fee. Fixed quotes before we start. Call 020 3900 4444.',
   keywords: ['locksmith prices london', 'locksmith cost london', 'how much locksmith london 2025'],
-  alternates: { canonical: 'https://londonlocksmithpro.co.uk/pricing' },
+  alternates: { canonical: `${SEO.siteUrl}/pricing` },
 }
 
 const pricingTable = [
-  { service: 'Emergency Lockout (Daytime)', range: '£49 – £90', time: 'Mon-Fri, 8am-6pm' },
-  { service: 'Emergency Lockout (Evening/Night)', range: '£80 – £130', time: 'After 6pm, weekends' },
-  { service: 'Emergency Lockout (Bank Holiday)', range: '£90 – £150', time: 'All bank holidays' },
-  { service: 'UPVC Door Repair', range: '£80 – £280', time: 'Parts-dependent' },
-  { service: 'Lock Replacement (Standard)', range: '£80 – £130', time: 'Per lock' },
-  { service: 'Anti-Snap Lock Upgrade', range: '£100 – £160', time: 'Per lock incl. parts' },
-  { service: 'Burglary Repair (Emergency)', range: '£150 – £500+', time: 'Extent-dependent' },
-  { service: 'Car Lockout', range: '£80 – £150', time: 'Make/model-dependent' },
-  { service: 'Smart Lock Installation', range: '£200 – £500', time: 'Supply + fit' },
-  { service: 'Key Cutting (Standard)', range: '£5 – £20', time: 'Per key' },
-  { service: 'Snapped Key Extraction', range: '£60 – £120', time: 'Per lock' },
-  { service: 'Security Survey', range: 'FREE', time: 'With any service' },
+  { service: 'Emergency Lockout (Daytime)', range: '£49 – £90', time: 'Mon-Fri, 8am-6pm', href: '/services/emergency-locksmith' },
+  { service: 'Emergency Lockout (Evening/Night)', range: '£80 – £130', time: 'After 6pm, weekends', href: '/services/24-hour-locksmith' },
+  { service: 'Emergency Lockout (Bank Holiday)', range: '£90 – £150', time: 'All bank holidays', href: '/services/24-hour-locksmith' },
+  { service: 'UPVC Door Repair', range: '£80 – £280', time: 'Parts-dependent', href: '/services/upvc-door-repair' },
+  { service: 'Lock Replacement (Standard)', range: '£80 – £130', time: 'Per lock', href: '/services/lock-replacement' },
+  { service: 'Anti-Snap Lock Upgrade', range: '£100 – £160', time: 'Per lock incl. parts', href: '/services/security-upgrades' },
+  { service: 'Burglary Repair (Emergency)', range: '£150 – £500+', time: 'Extent-dependent', href: '/services/burglary-repair' },
+  { service: 'Car Lockout', range: '£80 – £150', time: 'Make/model-dependent', href: '/services/car-locksmith' },
+  { service: 'Smart Lock Installation', range: '£200 – £500', time: 'Supply + fit', href: '/services/smart-lock-installation' },
+  { service: 'Key Cutting (Standard)', range: '£5 – £20', time: 'Per key', href: '/services/key-cutting' },
+  { service: 'Snapped Key Extraction', range: '£60 – £120', time: 'Per lock', href: '/services/snapped-key-extraction' },
+  { service: 'Security Survey', range: 'FREE', time: 'With any service', href: '/services/security-upgrades' },
 ]
 
 export default function PricingPage() {
+  const allLocations = locations
+
+  const schemas = [
+    generateWebPageSchema(
+      'Locksmith Prices London 2025 | Transparent Pricing | No Hidden Fees',
+      'Clear, transparent locksmith prices in London. Emergency call-outs from £49, lock changes from £80. No call-out fee.',
+      `${SEO.siteUrl}/pricing`
+    ),
+    generateBreadcrumbSchema([
+      { name: 'Home', href: '/' },
+      { name: 'Pricing', href: '/pricing' },
+    ]),
+  ]
+
   return (
     <>
+      <SchemaMarkup schemas={schemas} />
       {/* Hero */}
       <section className="relative py-20 px-4 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-glow-orange opacity-30" />
@@ -91,7 +109,9 @@ export default function PricingPage() {
                 index < pricingTable.length - 1 ? 'border-b border-gray-800' : ''
               }`}
             >
-              <span className="text-white font-medium">{row.service}</span>
+              <Link href={row.href} className="text-white font-medium hover:text-orange-400 transition-colors">
+                {row.service}
+              </Link>
               <span className={`font-bold ${row.range === 'FREE' ? 'text-green-400' : 'text-orange-400'}`}>
                 {row.range}
               </span>
@@ -160,7 +180,42 @@ export default function PricingPage() {
         </div>
       </div>
 
-      <FAQSection faqs={pricingFaqs} title="Pricing FAQs" />
+      {/* Service links */}
+      <div className="max-w-5xl mx-auto px-4 pb-12">
+        <h2 className="text-2xl font-bold text-white mb-5">Browse by Service</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {services.map((svc) => (
+            <Link
+              key={svc.slug}
+              href={`/services/${svc.slug}`}
+              className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+            >
+              <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-xs">
+                {svc.name}
+              </span>
+              <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+            </Link>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-bold text-white mt-10 mb-5">Pricing by Area</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {allLocations.map((loc) => (
+            <Link
+              key={loc.slug}
+              href={`/locations/${loc.slug}`}
+              className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all text-sm"
+            >
+              <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-xs">
+                Locksmith {loc.name}
+              </span>
+              <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <FAQSection faqs={pricingFaqs} title="Pricing FAQs" includeSchema={false} />
       <CTASection variant="minimal" />
     </>
   )

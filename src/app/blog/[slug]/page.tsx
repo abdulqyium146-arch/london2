@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Clock, Calendar, Tag, Phone, ChevronRight } from 'lucide-react'
+import { ArrowLeft, Clock, Calendar, Tag, Phone, ChevronRight, MapPin } from 'lucide-react'
 import { blogPosts, getBlogPost } from '@/data/blog-posts'
 import { services } from '@/data/services'
+import { locations } from '@/data/locations'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
@@ -17,6 +18,16 @@ import {
 import { generateBlogMetadata } from '@/lib/seo/metadata'
 import { formatDate } from '@/lib/utils'
 import { BUSINESS, SEO } from '@/lib/constants'
+
+function parseInlineMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      const isExternal = href.startsWith('http')
+      const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''
+      return `<a href="${href}" class="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"${attrs}>${label}</a>`
+    })
+}
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -102,13 +113,16 @@ export default async function BlogPostPage({ params }: Props) {
                 const trimmed = block.trim()
                 if (!trimmed) return null
                 if (trimmed.startsWith('# ')) {
-                  return <h2 key={i} className="text-3xl font-bold text-white mt-8 mb-4">{trimmed.slice(2)}</h2>
+                  return <h2 key={i} className="text-3xl font-bold text-white mt-8 mb-4" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(trimmed.slice(2)) }} />
                 }
                 if (trimmed.startsWith('## ')) {
-                  return <h3 key={i} className="text-2xl font-bold text-white mt-6 mb-3">{trimmed.slice(3)}</h3>
+                  return <h3 key={i} className="text-2xl font-bold text-white mt-6 mb-3" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(trimmed.slice(3)) }} />
                 }
                 if (trimmed.startsWith('### ')) {
-                  return <h4 key={i} className="text-xl font-semibold text-white mt-4 mb-2">{trimmed.slice(4)}</h4>
+                  return <h4 key={i} className="text-xl font-semibold text-white mt-4 mb-2" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(trimmed.slice(4)) }} />
+                }
+                if (trimmed.startsWith('---')) {
+                  return <hr key={i} className="border-gray-800 my-6" />
                 }
                 if (trimmed.startsWith('1. ') || trimmed.startsWith('- ')) {
                   const items = trimmed.split('\n').filter(Boolean)
@@ -117,16 +131,14 @@ export default async function BlogPostPage({ params }: Props) {
                       {items.map((item, j) => (
                         <li key={j} className="flex items-start gap-2">
                           <span className="text-orange-400 mt-1.5 flex-shrink-0">•</span>
-                          <span>{item.replace(/^[\d]+\.\s|^-\s/, '').replace(/\*\*(.*?)\*\*/g, '$1')}</span>
+                          <span dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(item.replace(/^[\d]+\.\s|^-\s/, '')) }} />
                         </li>
                       ))}
                     </ul>
                   )
                 }
                 return (
-                  <p key={i} dangerouslySetInnerHTML={{
-                    __html: trimmed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
-                  }} />
+                  <p key={i} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(trimmed) }} />
                 )
               })}
             </div>
@@ -176,6 +188,46 @@ export default async function BlogPostPage({ params }: Props) {
                     className="flex items-center gap-1 text-xs text-orange-400 hover:text-orange-300 mt-2 transition-colors"
                   >
                     All services →
+                  </Link>
+                </div>
+              </div>
+
+              {/* All services */}
+              <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+                <h3 className="text-white font-bold mb-3 text-sm">All Services</h3>
+                <div className="space-y-1.5">
+                  {services.map((svc) => (
+                    <Link
+                      key={svc.slug}
+                      href={`/services/${svc.slug}`}
+                      className="flex items-center justify-between text-xs text-slate-400 hover:text-orange-400 transition-colors group"
+                    >
+                      <span>{svc.name}</span>
+                      <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Locations */}
+              <div className="bg-[#111827] border border-gray-800 rounded-2xl p-5">
+                <h3 className="text-white font-bold mb-3 text-sm flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-orange-400" />
+                  Areas We Cover
+                </h3>
+                <div className="space-y-1.5">
+                  {locations.slice(0, 10).map((loc) => (
+                    <Link
+                      key={loc.slug}
+                      href={`/locations/${loc.slug}`}
+                      className="flex items-center justify-between text-xs text-slate-400 hover:text-orange-400 transition-colors group"
+                    >
+                      <span>Locksmith {loc.name}</span>
+                      <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+                    </Link>
+                  ))}
+                  <Link href="/areas-we-cover" className="text-xs text-orange-400 hover:text-orange-300 mt-1 block transition-colors">
+                    All areas →
                   </Link>
                 </div>
               </div>

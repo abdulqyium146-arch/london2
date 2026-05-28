@@ -28,6 +28,9 @@ import {
 import { BUSINESS } from '@/lib/constants'
 import { generalFaqs, emergencyFaqs } from '@/data/faqs'
 import { services } from '@/data/services'
+import { locations } from '@/data/locations'
+import { stations } from '@/data/stations'
+import { postcodes } from '@/data/postcodes'
 import { getRecentPosts } from '@/data/blog-posts'
 import { formatDate } from '@/lib/utils'
 
@@ -365,6 +368,93 @@ export default function HomePage() {
         subtitle="Everything you need to know about our locksmith service in London."
         includeSchema={false}
       />
+
+      {/* All Services Grid */}
+      <section className="py-14 px-4" aria-label="All locksmith services">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">Complete Service Range</p>
+            <h2 className="text-3xl font-bold text-white">All Locksmith Services in London</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {services.map((svc) => (
+              <Link
+                key={svc.slug}
+                href={`/services/${svc.slug}`}
+                className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all"
+              >
+                <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-sm">{svc.name}</span>
+                <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/services" className="text-sm text-orange-400 hover:text-orange-300 font-semibold transition-colors">
+              View all services with pricing →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* All London Areas Grid */}
+      <section className="py-14 px-4 bg-[#060E1A]/50" aria-label="Locksmith areas we cover">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">London-Wide Coverage</p>
+            <h2 className="text-3xl font-bold text-white">Locksmith — All London Areas</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8">
+            {locations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                className="group flex items-center justify-between p-3 bg-[#111827] border border-gray-800 rounded-xl hover:border-orange-500/40 transition-all"
+              >
+                <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-sm">Locksmith {loc.name}</span>
+                <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+              </Link>
+            ))}
+          </div>
+
+          {/* Postcodes quick links */}
+          <div className="mb-6">
+            <p className="text-slate-500 text-xs uppercase tracking-wider mb-3 font-semibold">By Postcode</p>
+            <div className="flex flex-wrap gap-2">
+              {postcodes.map((pc) => (
+                <Link
+                  key={pc.slug}
+                  href={`/locksmith-${pc.slug}`}
+                  className="text-xs px-3 py-1.5 rounded-full bg-gray-800 border border-gray-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/40 transition-all font-mono font-bold"
+                >
+                  {pc.code}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Station quick links */}
+          <div>
+            <p className="text-slate-500 text-xs uppercase tracking-wider mb-3 font-semibold">Near Tube & Rail Stations</p>
+            <div className="flex flex-wrap gap-2">
+              {stations.map((st) => (
+                <Link
+                  key={st.slug}
+                  href={`/locksmith-near-${st.slug}`}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/40 transition-all"
+                >
+                  Near {st.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-6">
+            <Link href="/areas-we-cover" className="text-sm text-orange-400 hover:text-orange-300 font-semibold transition-colors">
+              View all coverage areas →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Blog Preview */}
       {recentPosts.length > 0 && (

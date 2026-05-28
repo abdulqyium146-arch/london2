@@ -13,25 +13,29 @@ Understanding locksmith prices in London can be confusing. Prices vary significa
 
 ## Emergency Locksmith Prices London
 
-An emergency locksmith call-out in London during daytime hours (8am–6pm, Monday to Friday) typically costs between **£49 and £120**.
+An [emergency locksmith](/services/emergency-locksmith) call-out in London during daytime hours (8am–6pm, Monday to Friday) typically costs between **£49 and £120**.
 
-Out-of-hours, overnight, weekend, and bank holiday call-outs are generally higher — expect to pay **£80 to £150**.
+Out-of-hours, overnight, weekend, and bank holiday call-outs are generally higher — expect to pay **£80 to £150**. Our [24-hour locksmith service](/services/24-hour-locksmith) covers nights, weekends, and bank holidays at transparent, pre-agreed rates.
 
 **What affects the price?**
 - Time of day and day of week
 - Type of lock (simple Yale vs complex UPVC multipoint)
 - Whether destructive entry is required
-- Lock replacement if needed
+- [Lock replacement](/services/lock-replacement) if needed
 
 ## Lock Replacement Costs London
 
-Replacing a standard euro cylinder in a UPVC door costs around **£80–£130** including parts.
+[Replacing a standard euro cylinder](/services/lock-replacement) in a UPVC door costs around **£80–£130** including parts.
 
-Upgrading to a high-security anti-snap lock (TS007 3-star rated) costs **£100–£160** — and is strongly recommended.
+Upgrading to a high-security anti-snap lock (TS007 3-star rated) costs **£100–£160** — and is strongly recommended as part of any [security upgrade](/services/security-upgrades). See our full guide: [Anti-Snap Locks: Do You Need One in London?](/blog/anti-snap-locks-guide-london)
 
 ## UPVC Door Repair Prices
 
-UPVC multipoint lock mechanism replacement costs typically **£120–£200** including parts and labour. Handle replacement alone is **£60–£100**.
+[UPVC door repair and multipoint lock mechanism replacement](/services/upvc-door-repair) costs typically **£120–£200** including parts and labour. Handle replacement alone is **£60–£100**.
+
+## Residential Locksmith Pricing
+
+Our [24/7 residential locksmith service](/residential-locksmith-london) covers all lock types found in London homes — from Yale nightlatches to UPVC multipoint mechanisms. Residential jobs include house lockouts, lock repairs, and full security upgrades.
 
 ## Why Do Some London Locksmiths Charge So Much More?
 
@@ -45,7 +49,9 @@ Some locksmiths advertise very low prices (£15, £25) to get your call, then qu
 
 ## Our Prices
 
-London Locksmith Pro offers transparent, competitive pricing with no hidden charges and no call-out fee. All prices are provided upfront before any work begins.
+London Locksmith Pro offers transparent, competitive pricing with no hidden charges and no call-out fee. All prices are provided upfront before any work begins. See our full [locksmith price guide](/pricing) for a complete breakdown.
+
+**Popular areas we serve:** [Walthamstow](/locations/walthamstow) · [Stratford](/locations/stratford) · [Barking](/locations/barking) · [Ilford](/locations/ilford) · [Tottenham](/locations/tottenham) · [East Ham](/locations/east-ham)
 `,
     category: 'Pricing',
     tags: ['locksmith prices', 'locksmith cost london', 'how much locksmith', 'emergency locksmith price'],
@@ -74,17 +80,19 @@ London Locksmith Pro offers transparent, competitive pricing with no hidden char
     content: `
 # Anti-Snap Locks: The Complete Guide for London Homeowners
 
-Lock snapping accounts for around 30% of burglaries involving UPVC doors in the UK. If your home has a UPVC door with a standard euro cylinder, you may be at risk.
+Lock snapping accounts for around 30% of burglaries involving UPVC doors in the UK. If your home has a UPVC door with a standard euro cylinder, you may be at risk. Our [security upgrades service](/services/security-upgrades) includes anti-snap lock fitting across all London areas.
 
 ## What is Lock Snapping?
 
 Lock snapping (also called cylinder snapping) is a technique where a burglar snaps off the exposed end of a euro cylinder lock, gains access to the internal mechanism, and opens the door in seconds — often without making a sound.
 
-Standard euro cylinders, which are fitted to the vast majority of UPVC doors in London, are extremely vulnerable to this attack method.
+Standard euro cylinders, which are fitted to the vast majority of UPVC doors in London, are extremely vulnerable to this attack method. After a break-in, you'll need an [emergency burglary repair](/services/burglary-repair) as well as a lock upgrade.
 
 ## What is an Anti-Snap Lock?
 
 An anti-snap lock (also called a snap-resistant or 3-star lock) is a euro cylinder specifically designed to resist the snapping attack. When the exposed end is snapped off, a sacrificial section breaks away, but the lock mechanism itself remains intact and the door stays locked.
+
+This is now a standard recommendation for any [residential locksmith](/residential-locksmith-london) job involving UPVC doors in London.
 
 ## Which Anti-Snap Lock Rating Should I Look For?
 
@@ -99,13 +107,19 @@ The Sold Secure Diamond rating is also a very high standard to look for.
 3. **Mul-T-Lock MT5+** — High-grade commercial security suitable for residential use.
 4. **Avocet ABS** — Popular with locksmiths, TS007 3-star rated.
 
+Our [lock replacement service](/services/lock-replacement) covers all of these brands, fitted and guaranteed.
+
 ## Does My Home Insurance Require Anti-Snap Locks?
 
-Many home insurance policies now require TS007 3-star or BS3621 rated locks. Check your policy documents — if your locks aren't up to standard, your claim could be rejected after a burglary.
+Many home insurance policies now require TS007 3-star or BS3621 rated locks. Check your policy documents — if your locks aren't up to standard, your claim could be rejected after a burglary. Read: [What to Do After a Burglary in London](/blog/what-to-do-after-burglary-london)
 
 ## How Much Does it Cost to Upgrade to Anti-Snap Locks?
 
-Upgrading to a high-security anti-snap lock in London typically costs **£100–£160 per lock**, including parts and fitting. Most homes need 2-4 cylinders replaced.
+Upgrading to a high-security anti-snap lock in London typically costs **£100–£160 per lock**, including parts and fitting. Most homes need 2-4 cylinders replaced. See our [locksmith price guide](/pricing) for full details.
+
+**We fit anti-snap locks across London:** [Walthamstow](/locations/walthamstow) · [Stratford](/locations/stratford) · [Ilford](/locations/ilford) · [Barking](/locations/barking) · [Tottenham](/locations/tottenham) · [East Ham](/locations/east-ham) · [Dagenham](/locations/dagenham) · [Edmonton](/locations/edmonton)
+
+For more home security advice, read: [15 Home Security Tips for London Homes](/blog/home-security-tips-london)
 `,
     category: 'Security',
     tags: ['anti snap lock', 'ts007 lock', 'upvc lock security', 'london home security', 'lock snapping'],
@@ -154,13 +168,15 @@ Try not to disturb anything before the police have assessed the scene. This pres
 
 ## Step 4: Secure Your Property
 
-Call an emergency locksmith to secure your property immediately. **Do not sleep in the property until it is properly secured.** At London Locksmith Pro, we prioritise burglary call-outs and aim to arrive within 2 hours.
+Call an [emergency locksmith](/services/emergency-locksmith) to secure your property immediately. **Do not sleep in the property until it is properly secured.** Our [burglary repair service](/services/burglary-repair) treats break-in call-outs as highest priority and we aim to arrive within 2 hours.
 
 We will:
 - Secure any broken entry points
 - Fit temporary boarding if needed
-- Replace damaged or compromised locks with high-security options
-- Advise on further security measures
+- Replace damaged or compromised locks with high-security options — including [anti-snap locks](/blog/anti-snap-locks-guide-london)
+- Advise on further [security upgrades](/services/security-upgrades)
+
+If your front door mechanism was damaged, you may also need [UPVC door repair](/services/upvc-door-repair) or a full [lock replacement](/services/lock-replacement).
 
 ## Step 5: Contact Your Insurance Company
 
@@ -171,9 +187,17 @@ Most buildings insurance covers:
 - Door and window repairs
 - Structural damage
 
+Check our [locksmith pricing guide](/pricing) so you know what costs to claim.
+
 ## Step 6: Notify Your Neighbours
 
 Let nearby neighbours know about the break-in and ask them to report anything suspicious. Burglars often return to properties they've already targeted.
+
+## Prevent Future Break-Ins
+
+After a burglary, upgrading your home security is essential. Our [24/7 residential locksmith service](/residential-locksmith-london) can assess your property and recommend targeted improvements. Read: [15 Home Security Tips for Your London Home](/blog/home-security-tips-london)
+
+**Burglary repair available across London:** [Walthamstow](/locations/walthamstow) · [Stratford](/locations/stratford) · [Barking](/locations/barking) · [Tottenham](/locations/tottenham) · [Ilford](/locations/ilford) · [East Ham](/locations/east-ham) · [Edmonton](/locations/edmonton) · [Dagenham](/locations/dagenham)
 `,
     category: 'Security',
     tags: ['after burglary london', 'burglary advice', 'break in repair', 'emergency locksmith after burglary'],
@@ -202,7 +226,7 @@ Let nearby neighbours know about the break-in and ask them to report anything su
     content: `
 # UPVC Door Won't Open or Close: Causes and Solutions
 
-UPVC doors are durable, but their multipoint locking mechanisms can develop faults over time. Here's a guide to the most common UPVC door problems and their solutions.
+UPVC doors are durable, but their multipoint locking mechanisms can develop faults over time. Here's a guide to the most common UPVC door problems and their solutions. Our [UPVC door repair service](/services/upvc-door-repair) covers all of these issues across London, 24/7.
 
 ## Most Common UPVC Door Problems
 
@@ -210,11 +234,11 @@ UPVC doors are durable, but their multipoint locking mechanisms can develop faul
 
 This is usually a failed multipoint lock mechanism — the gearbox that drives the bolts and hooks has failed. The handle moves freely but the bolts don't extend.
 
-**Fix:** The multipoint mechanism needs to be replaced. This is a job for a locksmith, as the mechanism must be precisely matched to your door specification.
+**Fix:** The multipoint mechanism needs to be replaced. This is a job for a locksmith, as the mechanism must be precisely matched to your door specification. Our [lock repair service](/services/lock-repair) covers all UPVC mechanism types.
 
 ### 2. Door Won't Open (Key Turns But Door Stays Locked)
 
-This typically means the cylinder is turning but not operating the mechanism — usually a failed connection between the cylinder and gearbox, or a damaged internal component.
+This typically means the cylinder is turning but not operating the mechanism — usually a failed connection between the cylinder and gearbox, or a damaged internal component. If you're locked out, call our [emergency door opening service](/services/door-opening) — we use non-destructive entry in 95%+ of cases.
 
 **Fix:** First check the door isn't simply swollen or dropped on its hinges. If it's mechanical, the cylinder or the linkage may need replacement.
 
@@ -240,9 +264,19 @@ The door handle spindle or the through-spindle may have worn or broken. The back
 - Hinge replacement: **£80–£120**
 - Euro cylinder replacement: **£60–£120**
 
+For a full breakdown, see our [locksmith pricing page](/pricing). All prices include parts and labour — no hidden charges.
+
+## When to Upgrade Your UPVC Lock
+
+If your UPVC door has a standard euro cylinder, consider upgrading to a [high-security anti-snap lock](/services/security-upgrades) at the same time as any repair. This prevents cylinder snapping — the most common UPVC door break-in method. Read our full guide: [Anti-Snap Locks: Do You Need One?](/blog/anti-snap-locks-guide-london)
+
 ## Can You Prevent UPVC Door Problems?
 
 Lubricate your UPVC door mechanisms annually with a UPVC-compatible lubricant (NOT WD-40, which can damage seals). Keep the door adjusted so it closes without needing to force it.
+
+**UPVC door repair across London:** [Walthamstow](/locations/walthamstow) · [Barking](/locations/barking) · [Stratford](/locations/stratford) · [Ilford](/locations/ilford) · [East Ham](/locations/east-ham) · [Tottenham](/locations/tottenham) · [Southall](/locations/southall) · [Mitcham](/locations/mitcham)
+
+Also see: [How Much Does a Locksmith Cost in London?](/blog/how-much-does-a-locksmith-cost-in-london)
 `,
     category: 'Guides',
     tags: ['upvc door repair', 'upvc door wont open', 'upvc lock problems', 'upvc door london'],
@@ -271,15 +305,15 @@ Lubricate your UPVC door mechanisms annually with a UPVC-compatible lubricant (N
     content: `
 # 15 Home Security Tips to Protect Your London Home
 
-London\'s crime statistics vary significantly by borough and neighbourhood, but home burglary is a concern for every London homeowner. Here are 15 practical security measures that make a real difference.
+London\'s crime statistics vary significantly by borough and neighbourhood, but home burglary is a concern for every London homeowner. Here are 15 practical security measures that make a real difference. Our [24/7 residential locksmith service](/residential-locksmith-london) can implement all of these for you.
 
 ## 1. Upgrade to Anti-Snap Locks (Priority)
 
-If your UPVC door has a standard euro cylinder, lock snapping is your biggest risk. Upgrade to a TS007 3-star anti-snap lock immediately. Cost: £100–£160 per lock fitted.
+If your UPVC door has a standard euro cylinder, lock snapping is your biggest risk. Upgrade to a TS007 3-star anti-snap lock immediately. Cost: £100–£160 per lock fitted. Read our full guide: [Anti-Snap Locks for London Homes](/blog/anti-snap-locks-guide-london)
 
 ## 2. Fit a BS3621 Deadlock on Wooden Doors
 
-For wooden front doors, a British Standard (BS3621) deadlock provides the minimum standard required by most insurance policies. Ensure the lock engages fully — a deadlock that isn\'t deadlocked offers no protection.
+For wooden front doors, a British Standard (BS3621) deadlock provides the minimum standard required by most insurance policies. Our [lock replacement service](/services/lock-replacement) installs approved BS3621 deadlocks to every specification.
 
 ## 3. Install Door Chain or Door Bar
 
@@ -295,7 +329,7 @@ Patio doors are a common entry point. Fit anti-lift blocks and key-locking patio
 
 ## 6. Fit Window Locks
 
-Most household insurance requires window locks on accessible windows. Key-operated window locks provide the highest security. Don\'t forget first-floor windows accessible from extensions or drainpipes.
+Most household insurance requires window locks on accessible windows. Key-operated window locks provide the highest security. Our [security upgrades service](/services/security-upgrades) covers window and door locks across all London properties.
 
 ## 7. Install a Video Doorbell
 
@@ -307,7 +341,7 @@ An occupied-looking home is a less attractive target. Use smart plugs or timer s
 
 ## 9. Consider a Smart Lock
 
-Smart locks with app control allow you to monitor who enters and exits, set access codes for cleaners or tradespeople, and ensure you\'ve locked up remotely. Cost: £200–£500 fitted.
+[Smart locks](/services/smart-lock-installation) with app control allow you to monitor who enters and exits, set access codes for cleaners or tradespeople, and ensure you\'ve locked up remotely. Cost: £200–£500 fitted across London.
 
 ## 10. Review Your Perimeter
 
@@ -315,7 +349,7 @@ Tall, dense hedges and shrubs at the front of your property give burglars cover 
 
 ## 11. Secure Your Garage
 
-Garages are frequently targeted. Fit a quality padlock, deadlock, or smart garage system. Ensure the internal door connecting the garage to the house is fitted with a BS3621 deadlock.
+Garages are frequently targeted. Fit a quality padlock, deadlock, or smart garage system. Ensure the internal door connecting the garage to the house is fitted with a BS3621 deadlock via our [lock repair service](/services/lock-repair).
 
 ## 12. Engrave or Mark Valuables
 
@@ -332,6 +366,12 @@ Avoid posting on social media that you\'re on holiday or away from home. Burglar
 ## 15. Get a Free Security Survey
 
 London Locksmith Pro offers a free security survey for your home. Our locksmiths will identify vulnerabilities and recommend targeted, cost-effective improvements. Call 020 3900 4444 to arrange.
+
+---
+
+**If your home has been broken into:** Read [What to Do After a Burglary in London](/blog/what-to-do-after-burglary-london) for step-by-step guidance, and call our [emergency burglary repair service](/services/burglary-repair) for immediate help.
+
+**Security upgrades available across London:** [Walthamstow](/locations/walthamstow) · [Stratford](/locations/stratford) · [Barking](/locations/barking) · [Ilford](/locations/ilford) · [Tottenham](/locations/tottenham) · [East Ham](/locations/east-ham) · [Southall](/locations/southall) · [Feltham](/locations/feltham) · [Mitcham](/locations/mitcham) · [Chingford](/locations/chingford)
 `,
     category: 'Security',
     tags: ['home security tips london', 'home security', 'burglary prevention london', 'secure home london'],

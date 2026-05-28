@@ -13,20 +13,34 @@ import { BUSINESS } from '@/lib/constants'
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
 import { postcodes } from '@/data/postcodes'
+import { stations } from '@/data/stations'
 
 const POPULAR_SEARCHES: { label: string; href: string }[] = [
   { label: '24/7 Residential Locksmith London', href: '/residential-locksmith-london' },
+  { label: 'Emergency Locksmith Walthamstow', href: '/emergency-locksmith-walthamstow' },
+  { label: 'Emergency Locksmith Barking', href: '/emergency-locksmith-barking' },
+  { label: 'Emergency Locksmith Stratford', href: '/emergency-locksmith-stratford' },
+  { label: 'Emergency Locksmith Ilford', href: '/emergency-locksmith-ilford' },
+  { label: 'Emergency Locksmith Tottenham', href: '/emergency-locksmith-tottenham' },
+  { label: 'House Lockout London', href: '/services/house-lockout' },
+  { label: 'House Lockout Walthamstow', href: '/house-lockout-walthamstow' },
+  { label: 'House Lockout Barking', href: '/house-lockout-barking' },
+  { label: 'UPVC Door Repair London', href: '/services/upvc-door-repair' },
+  { label: 'UPVC Door Repair Walthamstow', href: '/upvc-door-repair-walthamstow' },
+  { label: 'Burglary Repair London', href: '/services/burglary-repair' },
+  { label: 'Burglary Repair Barking', href: '/burglary-repair-barking' },
+  { label: 'Lock Replacement London', href: '/services/lock-replacement' },
+  { label: 'Smart Lock Installation London', href: '/services/smart-lock-installation' },
+  { label: 'Car Locksmith London', href: '/services/car-locksmith' },
+  { label: 'Locksmith Near Stratford Station', href: '/locksmith-near-stratford-station' },
+  { label: 'Locksmith Near Walthamstow Central', href: '/locksmith-near-walthamstow-central-station' },
+  { label: 'Locksmith Near Barking Station', href: '/locksmith-near-barking-station' },
   { label: 'Locksmith E17', href: '/locksmith-e17' },
   { label: 'Locksmith E10', href: '/locksmith-e10' },
   { label: 'Locksmith RM8', href: '/locksmith-rm8' },
-  { label: 'Emergency Locksmith Walthamstow', href: '/emergency-locksmith-walthamstow' },
-  { label: 'Emergency Locksmith Barking', href: '/emergency-locksmith-barking' },
-  { label: 'House Lockout London', href: '/services/house-lockout' },
-  { label: 'UPVC Door Repair London', href: '/services/upvc-door-repair' },
-  { label: 'Burglary Repair London', href: '/services/burglary-repair' },
-  { label: 'Locksmith Near Stratford Station', href: '/locksmith-near-stratford-station' },
-  { label: 'Smart Lock Installation London', href: '/services/smart-lock-installation' },
-  { label: 'Lock Replacement London', href: '/services/lock-replacement' },
+  { label: 'Locksmith IG1', href: '/locksmith-ig1' },
+  { label: 'Locksmith N17', href: '/locksmith-n17' },
+  { label: 'Locksmith E15', href: '/locksmith-e15' },
 ]
 
 export function Footer() {
@@ -34,6 +48,11 @@ export function Footer() {
   const allServices = services
   const featuredLocations = locations.slice(0, 12)
   const featuredPostcodes = postcodes.slice(0, 12)
+  const allLocations = locations
+  const allStations = stations
+  // Top 5 emergency services × top 6 locations = 30 combo links
+  const topEmergencyServices = services.filter((s) => s.emergencyService).slice(0, 5)
+  const topLocations = locations.slice(0, 6)
 
   return (
     <footer className="bg-[#060E1A] border-t border-gray-900 mt-auto pb-24 md:pb-0">
@@ -236,8 +255,64 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Emergency Postcodes Strip */}
+        {/* Service × Location matrix */}
         <div className="mt-12 pt-8 border-t border-gray-800">
+          <p className="text-slate-500 text-xs mb-4 uppercase tracking-wider font-semibold">
+            Emergency Locksmith Services by Area
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5">
+            {topEmergencyServices.flatMap((svc) =>
+              topLocations.map((loc) => (
+                <Link
+                  key={`${svc.slug}-${loc.slug}`}
+                  href={`/${svc.slug}-${loc.slug}`}
+                  className="text-xs px-2 py-1 rounded bg-gray-900 text-slate-500 hover:text-orange-400 hover:bg-gray-800 transition-all border border-gray-800 truncate"
+                >
+                  {svc.shortName || svc.name} {loc.name}
+                </Link>
+              ))
+            )}
+          </div>
+        </div>
+
+        {/* All areas strip */}
+        <div className="mt-6 pt-6 border-t border-gray-800">
+          <p className="text-slate-500 text-xs mb-3 uppercase tracking-wider font-semibold">
+            Locksmith — All London Areas
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {allLocations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                className="text-xs px-2 py-0.5 rounded bg-gray-900 text-slate-500 hover:text-orange-400 hover:bg-gray-800 transition-all border border-gray-800"
+              >
+                {loc.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Stations strip */}
+        <div className="mt-4 pt-4 border-t border-gray-800">
+          <p className="text-slate-500 text-xs mb-3 uppercase tracking-wider font-semibold">
+            Locksmith Near Stations
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {allStations.map((st) => (
+              <Link
+                key={st.slug}
+                href={`/locksmith-near-${st.slug}`}
+                className="text-xs px-2 py-0.5 rounded bg-gray-900 text-slate-500 hover:text-orange-400 hover:bg-gray-800 transition-all border border-gray-800"
+              >
+                {st.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Emergency Postcodes Strip */}
+        <div className="mt-4 pt-4 border-t border-gray-800">
           <p className="text-slate-500 text-xs mb-3 uppercase tracking-wider font-semibold">
             Emergency Locksmith — All London Postcodes
           </p>

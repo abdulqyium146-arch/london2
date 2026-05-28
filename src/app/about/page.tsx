@@ -1,22 +1,39 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Shield, Award, Users, CheckCircle2, Star, Clock } from 'lucide-react'
+import { Phone, Shield, Award, Users, CheckCircle2, Star, Clock, ChevronRight, MapPin, Wrench } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { CTASection } from '@/components/sections/CTASection'
 import { ReviewsSlider } from '@/components/sections/ReviewsSlider'
-import { BUSINESS } from '@/lib/constants'
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
+import { generateWebPageSchema, generateBreadcrumbSchema } from '@/lib/seo/schema'
+import { BUSINESS, SEO } from '@/lib/constants'
+import { services } from '@/data/services'
+import { locations } from '@/data/locations'
 
 export const metadata: Metadata = {
   title: 'About London Locksmith Pro | 15+ Years | Trusted London Locksmiths',
   description:
     'About London Locksmith Pro. 15+ years serving London, 50,000+ jobs completed, 4.9★ rated. DBS checked, fully insured, Master Locksmiths Association members.',
   keywords: ['about london locksmith pro', 'trusted locksmith london', 'experienced locksmith london'],
-  alternates: { canonical: 'https://londonlocksmithpro.co.uk/about' },
+  alternates: { canonical: `${SEO.siteUrl}/about` },
 }
 
 export default function AboutPage() {
+  const schemas = [
+    generateWebPageSchema(
+      'About London Locksmith Pro | 15+ Years | Trusted London Locksmiths',
+      'About London Locksmith Pro. 15+ years serving London, 50,000+ jobs completed, 4.9★ rated.',
+      `${SEO.siteUrl}/about`
+    ),
+    generateBreadcrumbSchema([
+      { name: 'Home', href: '/' },
+      { name: 'About', href: '/about' },
+    ]),
+  ]
+
   return (
     <>
+      <SchemaMarkup schemas={schemas} />
       {/* Hero */}
       <section className="relative py-20 px-4 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-glow-orange opacity-30" />
@@ -168,6 +185,61 @@ export default function AboutPage() {
             We have locksmiths stationed across East, North, South, and West London. Local
             knowledge means faster response and better service for you.
           </p>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 pb-8">
+        <div className="bg-[#111827] border border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="flex items-center gap-3 mb-6">
+            <Wrench className="w-5 h-5 text-orange-400" />
+            <h2 className="text-2xl font-bold text-white">Our Locksmith Services</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {services.map((svc) => (
+              <Link
+                key={svc.slug}
+                href={`/services/${svc.slug}`}
+                className="group flex items-center justify-between p-3 bg-gray-800/40 border border-gray-700 rounded-xl hover:border-orange-500/40 transition-all"
+              >
+                <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-xs">
+                  {svc.name}
+                </span>
+                <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4">
+            <Link href="/services" className="text-sm text-orange-400 hover:text-orange-300 transition-colors">
+              View all services →
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-[#111827] border border-gray-800 rounded-3xl p-8 mb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <MapPin className="w-5 h-5 text-orange-400" />
+            <h2 className="text-2xl font-bold text-white">Areas We Serve</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {locations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                className="group flex items-center justify-between p-3 bg-gray-800/40 border border-gray-700 rounded-xl hover:border-orange-500/40 transition-all"
+              >
+                <span className="text-slate-300 group-hover:text-orange-400 transition-colors text-xs">
+                  Locksmith {loc.name}
+                </span>
+                <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-orange-400 flex-shrink-0" />
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4">
+            <Link href="/areas-we-cover" className="text-sm text-orange-400 hover:text-orange-300 transition-colors">
+              View all areas →
+            </Link>
+          </div>
         </div>
       </div>
 

@@ -288,6 +288,26 @@ export function ServiceLocationPage({ service, location, slug }: ServiceLocation
                 </div>
               </div>
             )}
+
+            {/* This service across all London */}
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {service.name} — All London Areas
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {locations
+                  .filter((l) => l.slug !== location.slug)
+                  .map((loc) => (
+                    <Link
+                      key={loc.slug}
+                      href={`/${service.slug}-${loc.slug}`}
+                      className="group text-xs px-2.5 py-2 rounded-lg bg-[#111827] border border-gray-800 text-slate-400 hover:text-orange-400 hover:border-orange-500/30 transition-all"
+                    >
+                      {service.shortName || service.name} {loc.name}
+                    </Link>
+                  ))}
+              </div>
+            </div>
           </div>
 
           {/* Sidebar */}

@@ -311,6 +311,29 @@ export function PostcodePage({ postcode, slug }: PostcodePageProps) {
         </section>
       </div>
 
+      {/* All London areas cross-links */}
+      <div className="max-w-7xl mx-auto px-4 pb-10">
+        <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
+          <h3 className="text-white font-bold text-lg mb-4">Locksmith — All London Areas</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            {postcodes.map((pc) => (
+              <Link
+                key={pc.slug}
+                href={`/locksmith-${pc.slug}`}
+                className={`text-xs px-2.5 py-1.5 rounded-lg border transition-all ${
+                  pc.code === postcode.code
+                    ? 'bg-orange-500/20 border-orange-500/40 text-orange-400 font-bold'
+                    : 'bg-gray-800/50 border-gray-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/30'
+                }`}
+              >
+                <span className="font-mono font-bold">{pc.code}</span>
+                <span className="ml-1 text-slate-500 text-[10px]">{pc.area.split(' ')[0]}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <FAQSection
         faqs={postcodeFaqs}
         title={`Locksmith ${postcode.code} FAQs`}
