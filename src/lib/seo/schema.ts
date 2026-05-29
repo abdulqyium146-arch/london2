@@ -14,13 +14,12 @@ export function generateOrganizationSchema() {
     url: BASE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${BASE_URL}/images/logo.png`,
+      url: `${BASE_URL}/logo.webp`,
       width: 400,
       height: 100,
     },
     image: [
-      `${BASE_URL}/images/og-default.jpg`,
-      `${BASE_URL}/images/logo.png`,
+      `${BASE_URL}/logo.webp`,
     ],
     telephone: BUSINESS.phone,
     email: BUSINESS.email,

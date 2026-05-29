@@ -26,6 +26,18 @@ const HIGH_TRAFFIC_LOCATION_SLUGS = new Set([
   'east-ham',
   'edmonton',
   'forest-gate',
+  // High-volume keyword expansion
+  'central-london',
+  'north-london',
+  'east-london',
+  'west-london',
+  'south-london',
+  'balham',
+  'earls-court',
+  'islington',
+  'old-street',
+  'stockwell',
+  'highbury',
 ])
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,8 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core pages
   entries.push(
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
-    // Money page — exact keyword target
+    // Money pages — exact keyword targets
     { url: `${BASE_URL}/residential-locksmith-london`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${BASE_URL}/affordable-locksmith-london`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/change-locks-london`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/locations`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/areas-we-cover`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },

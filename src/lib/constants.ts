@@ -72,7 +72,7 @@ export const SEO = {
   titleTemplate: '%s | London Locksmith',
   defaultDescription:
     'Emergency locksmith in London available 24/7. 30-minute response across all London boroughs. No call-out fee. Fully insured. Call 020 3900 4444 now.',
-  defaultOgImage: '/images/og-default.jpg',
+  defaultOgImage: '/logo.webp',
   twitterHandle: '@londonlocksmith',
   twitterCardType: 'summary_large_image',
   locale: 'en_GB',
