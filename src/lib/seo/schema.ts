@@ -530,6 +530,5 @@ export function generateWebPageSchema(
     inLanguage: 'en-GB',
     isPartOf: { '@id': `${BASE_URL}/#website` },
     about: { '@id': `${BASE_URL}/#organization` },
-    breadcrumb: { '@id': `${url}#breadcrumb` },
   }
 }

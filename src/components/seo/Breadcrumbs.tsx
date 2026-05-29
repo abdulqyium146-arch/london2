@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
-import { SingleSchema } from '@/components/seo/SchemaMarkup'
-import { generateBreadcrumbSchema } from '@/lib/seo/schema'
 import type { BreadcrumbItem } from '@/types'
 
 interface BreadcrumbsProps {
@@ -11,11 +9,9 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
   const allItems = [{ name: 'Home', href: '/' }, ...items]
-  const schema = generateBreadcrumbSchema(allItems)
 
   return (
     <>
-      <SingleSchema schema={schema} id="breadcrumb-schema" />
       <nav
         aria-label="Breadcrumb"
         className={`flex items-center gap-1 text-sm text-slate-400 ${className}`}
