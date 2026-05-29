@@ -1,4 +1,4 @@
-import type { Location } from '@/types'
+﻿import type { Location } from '@/types'
 
 export const locations: Location[] = [
   {
@@ -23,7 +23,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '20 minutes from central London',
     metaTitle: 'Locksmith Walthamstow | 24/7 | 20-Min Response | E17',
-    metaDescription: 'Local locksmith in Walthamstow available 24/7. Fast 20-minute response across E17. Emergency lockouts, lock repairs, burglary repairs. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Walthamstow available 24/7. Fast 20-minute response across E17. Emergency lockouts, lock repairs, burglary repairs. Call 07984 547185.',
     keywords: ['locksmith walthamstow', 'locksmith e17', 'emergency locksmith walthamstow', 'locksmith walthamstow 24 hour'],
     localFacts: [
       'Home to the longest outdoor market in Europe — Walthamstow Market on Hoe Street',
@@ -55,7 +55,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Leyton | 24/7 | Fast Response | E10',
-    metaDescription: 'Local locksmith in Leyton available 24/7. Fast response across E10. Emergency lockouts, lock changes, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Leyton available 24/7. Fast response across E10. Emergency lockouts, lock changes, burglary repair. Call 07984 547185.',
     keywords: ['locksmith leyton', 'locksmith e10', 'emergency locksmith leyton', '24 hour locksmith leyton'],
     localFacts: [
       'Served by Leyton station on the Central Line',
@@ -86,7 +86,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Leytonstone | 24/7 | Fast Response | E11',
-    metaDescription: 'Locksmith in Leytonstone available 24/7. Fast response across E11. Emergency lockouts, UPVC repairs, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Leytonstone available 24/7. Fast response across E11. Emergency lockouts, UPVC repairs, lock changes. Call 07984 547185.',
     keywords: ['locksmith leytonstone', 'locksmith e11', 'emergency locksmith leytonstone'],
     localFacts: [
       'Birthplace of filmmaker Alfred Hitchcock',
@@ -117,7 +117,7 @@ export const locations: Location[] = [
     responseTime: '25-30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Barking | 24/7 | IG11 | Emergency Response',
-    metaDescription: 'Locksmith in Barking available 24/7. Fast response across IG11. Emergency lockouts, lock repairs, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Barking available 24/7. Fast response across IG11. Emergency lockouts, lock repairs, burglary repair. Call 07984 547185.',
     keywords: ['locksmith barking', 'locksmith ig11', 'emergency locksmith barking', '24 hour locksmith barking'],
     localFacts: [
       'Major transport hub on the District, Hammersmith & City, and Overground lines',
@@ -149,7 +149,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Dagenham | 24/7 | RM8 RM9 RM10 | Fast Response',
-    metaDescription: 'Locksmith in Dagenham available 24/7. Fast response across RM8, RM9, RM10. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Dagenham available 24/7. Fast response across RM8, RM9, RM10. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith dagenham', 'locksmith rm8', 'cheap locksmith dagenham', 'emergency locksmith dagenham', '24 hour locksmith dagenham'],
     localFacts: [
       'Home to the historic Ford Dagenham manufacturing plant',
@@ -180,7 +180,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Plaistow | 24/7 | E13 | Emergency Locksmith',
-    metaDescription: 'Locksmith in Plaistow available 24/7. Fast response across E13. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Plaistow available 24/7. Fast response across E13. Emergency lockouts, UPVC repairs. Call 07984 547185.',
     keywords: ['locksmith plaistow', 'locksmith e13', 'emergency locksmith plaistow'],
     localFacts: [
       'Part of the London Borough of Newham',
@@ -211,7 +211,7 @@ export const locations: Location[] = [
     responseTime: '25-30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith East Ham | 24/7 | E6 | Emergency Response',
-    metaDescription: 'Locksmith in East Ham available 24/7. Fast response across E6. Emergency lockouts, lock repairs, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in East Ham available 24/7. Fast response across E6. Emergency lockouts, lock repairs, burglary repair. Call 07984 547185.',
     keywords: ['locksmith east ham', 'locksmith e6', '24 hour locksmith east ham', 'emergency locksmith east ham'],
     localFacts: [
       'Served by East Ham station on District and Hammersmith & City lines',
@@ -242,7 +242,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Manor Park | 24/7 | E12 | Fast Response',
-    metaDescription: 'Locksmith in Manor Park available 24/7. Fast response across E12. Emergency lockouts, lock repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Manor Park available 24/7. Fast response across E12. Emergency lockouts, lock repairs. Call 07984 547185.',
     keywords: ['locksmith manor park', 'locksmith e12', 'emergency locksmith manor park'],
     localFacts: [
       'Served by Manor Park station on the Elizabeth line',
@@ -273,7 +273,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Forest Gate | 24/7 | E7 | Emergency Locksmith',
-    metaDescription: 'Locksmith in Forest Gate available 24/7. Fast response across E7. Emergency lockouts, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Forest Gate available 24/7. Fast response across E7. Emergency lockouts, burglary repair. Call 07984 547185.',
     keywords: ['locksmith forest gate', 'locksmith e7', 'emergency locksmith forest gate'],
     localFacts: [
       'Adjacent to Wanstead Flats, one of East London\'s largest open spaces',
@@ -303,7 +303,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Edmonton | 24/7 | N9 N18 | Fast Response',
-    metaDescription: 'Locksmith in Edmonton available 24/7. Fast response across N9 and N18. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Edmonton available 24/7. Fast response across N9 and N18. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith edmonton', 'locksmith n9', 'locksmith n18', '24 hour locksmith edmonton', 'emergency locksmith edmonton'],
     localFacts: [
       'Contains Edmonton Green, a major shopping and transport hub',
@@ -334,7 +334,7 @@ export const locations: Location[] = [
     responseTime: '25-30 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Tottenham | 24/7 | N17 | Fast Emergency Response',
-    metaDescription: 'Locksmith in Tottenham available 24/7. Fast response across N17. Emergency lockouts, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Tottenham available 24/7. Fast response across N17. Emergency lockouts, burglary repair. Call 07984 547185.',
     keywords: ['locksmith tottenham', 'locksmith n17', 'burglary repair tottenham', '24 hour locksmith tottenham', 'emergency locksmith tottenham'],
     localFacts: [
       'Home to Tottenham Hotspur Stadium',
@@ -366,7 +366,7 @@ export const locations: Location[] = [
     responseTime: '30-35 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Chingford | 24/7 | E4 | Fast Response',
-    metaDescription: 'Locksmith in Chingford available 24/7. Fast response across E4. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Chingford available 24/7. Fast response across E4. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith chingford', 'locksmith e4', 'emergency locksmith chingford'],
     localFacts: [
       'Borders Epping Forest — one of London\'s largest open spaces',
@@ -397,7 +397,7 @@ export const locations: Location[] = [
     responseTime: '25-30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Ilford | 24/7 | IG1 IG2 | Emergency Response',
-    metaDescription: 'Locksmith in Ilford available 24/7. Fast response across IG1, IG2. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Ilford available 24/7. Fast response across IG1, IG2. Emergency lockouts, UPVC repairs. Call 07984 547185.',
     keywords: ['locksmith ilford', 'locksmith ig1', 'upvc door repair ilford', 'emergency locksmith ilford', '24 hour locksmith ilford'],
     localFacts: [
       'Served by the Elizabeth line for fast connections to central London',
@@ -428,7 +428,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '20 minutes from central London',
     metaTitle: 'Locksmith Stratford | 24/7 | E15 | Near Olympic Park',
-    metaDescription: 'Locksmith in Stratford available 24/7. Fast 20-minute response across E15. Emergency lockouts, lock repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Stratford available 24/7. Fast 20-minute response across E15. Emergency lockouts, lock repairs. Call 07984 547185.',
     keywords: ['locksmith stratford', 'locksmith e15', 'emergency locksmith stratford', 'locksmith near stratford station'],
     localFacts: [
       'Home to Queen Elizabeth Olympic Park and Westfield Stratford City',
@@ -459,7 +459,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Southall | 24/7 | UB1 UB2 | Fast Response',
-    metaDescription: 'Locksmith in Southall available 24/7. Fast response across UB1, UB2. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Southall available 24/7. Fast response across UB1, UB2. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith southall', 'locksmith ub1', 'cheap locksmith southall', 'emergency locksmith southall', '24 hour locksmith southall'],
     localFacts: [
       'Known as the "Capital of British Asians" due to its large South Asian community',
@@ -490,7 +490,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Greenford | 24/7 | UB6 | Fast Response',
-    metaDescription: 'Locksmith in Greenford available 24/7. Fast response across UB6. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Greenford available 24/7. Fast response across UB6. Emergency lockouts, UPVC repairs. Call 07984 547185.',
     keywords: ['locksmith greenford', 'locksmith ub6', 'emergency locksmith greenford'],
     localFacts: ['Served by the Central Line at Greenford station', 'Adjacent to Horsenden Hill nature reserve'],
     competitionLevel: 'low',
@@ -517,7 +517,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Mitcham | 24/7 | CR4 | Emergency Response',
-    metaDescription: 'Locksmith in Mitcham available 24/7. Fast response across CR4. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Mitcham available 24/7. Fast response across CR4. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith mitcham', 'locksmith cr4', 'emergency locksmith mitcham', '24 hour locksmith mitcham'],
     localFacts: [
       'Home to Mitcham Common, one of South London\'s largest open spaces',
@@ -548,7 +548,7 @@ export const locations: Location[] = [
     responseTime: '35 minutes',
     driveTime: '40 minutes from central London',
     metaTitle: 'Locksmith Feltham | 24/7 | TW13 TW14 | Fast Response',
-    metaDescription: 'Locksmith in Feltham available 24/7. Fast response across TW13, TW14. Emergency lockouts, lock repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Feltham available 24/7. Fast response across TW13, TW14. Emergency lockouts, lock repairs. Call 07984 547185.',
     keywords: ['locksmith feltham', 'locksmith tw13', 'emergency locksmith feltham'],
     localFacts: ['Located near Heathrow Airport', 'Part of the London Borough of Hounslow', 'Direct rail links to London Waterloo'],
     competitionLevel: 'low',
@@ -575,7 +575,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '25 minutes from central London',
     metaTitle: 'Locksmith Seven Sisters | 24/7 | N15 | Victoria Line',
-    metaDescription: 'Locksmith in Seven Sisters available 24/7. Fast 25-minute response across N15. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Seven Sisters available 24/7. Fast 25-minute response across N15. Emergency lockouts. Call 07984 547185.',
     keywords: ['locksmith seven sisters', 'locksmith n15', 'emergency locksmith seven sisters'],
     localFacts: [
       'Served by Victoria Line at Seven Sisters station',
@@ -606,7 +606,7 @@ export const locations: Location[] = [
     responseTime: '30-35 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Ponders End | 24/7 | EN3 | Fast Response',
-    metaDescription: 'Locksmith in Ponders End available 24/7. Fast response across EN3. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Ponders End available 24/7. Fast response across EN3. Emergency lockouts. Call 07984 547185.',
     keywords: ['locksmith ponders end', 'locksmith en3', 'emergency locksmith ponders end'],
     localFacts: ['Borders Lee Valley Regional Park', 'Rail connections to Liverpool Street via Greater Anglia'],
     competitionLevel: 'low',
@@ -633,7 +633,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '35 minutes from central London',
     metaTitle: 'Locksmith Beckton | 24/7 | DLR | Emergency Response',
-    metaDescription: 'Locksmith in Beckton available 24/7. Fast response. Emergency lockouts, lock repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Beckton available 24/7. Fast response. Emergency lockouts, lock repairs. Call 07984 547185.',
     keywords: ['locksmith beckton', 'emergency locksmith beckton'],
     localFacts: ['Served by Beckton DLR station', 'Purpose-built residential area developed in the 1980s'],
     competitionLevel: 'low',
@@ -660,7 +660,7 @@ export const locations: Location[] = [
     responseTime: '30 minutes',
     driveTime: '30 minutes from central London',
     metaTitle: 'Locksmith Norbury | 24/7 | SW16 | Fast Response',
-    metaDescription: 'Locksmith in Norbury available 24/7. Fast response across SW16. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in Norbury available 24/7. Fast response across SW16. Emergency lockouts, lock changes. Call 07984 547185.',
     keywords: ['locksmith norbury', 'locksmith sw16', 'emergency locksmith norbury'],
     localFacts: ['Part of the London Borough of Croydon', 'Served by Southern Rail to London Bridge and Victoria'],
     competitionLevel: 'low',
@@ -690,7 +690,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '0 minutes — central coverage',
     metaTitle: 'Central London Locksmith | 24/7 | WC1 WC2 W1 EC1 | 25-Min Response',
-    metaDescription: 'Trusted central London locksmith available 24/7. 25-minute response across WC1, WC2, W1, EC1, EC2. Emergency lockouts, lock changes, no call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Trusted central London locksmith available 24/7. 25-minute response across WC1, WC2, W1, EC1, EC2. Emergency lockouts, lock changes, no call-out fee. Call 07984 547185.',
     keywords: ['central london locksmith', 'locksmith central london', 'locksmith in central london', 'central london locksmiths', 'emergency locksmith central london', 'locksmith wc1', 'locksmith wc2'],
     localFacts: [
       'Covers WC1, WC2, W1, EC1, EC2 and SW1 postcodes',
@@ -852,7 +852,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '20 minutes from central London',
     metaTitle: 'Locksmith Balham | 24/7 | SW12 | 25-Min Response | No Call-Out Fee',
-    metaDescription: 'Trusted locksmith in Balham available 24/7. 25-minute response across SW12. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Trusted locksmith in Balham available 24/7. 25-minute response across SW12. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 07984 547185.',
     keywords: ['locksmith balham', 'balham locksmith', 'locksmith sw12', 'emergency locksmith balham', '24 hour locksmith balham'],
     localFacts: [
       'Served by Balham station on the Northern Line and Southern Rail',
@@ -885,7 +885,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '15 minutes from central London',
     metaTitle: 'Locksmith Earls Court | 24/7 | SW5 W8 | 25-Min Response | No Call-Out Fee',
-    metaDescription: 'Local locksmith in Earls Court available 24/7. 25-minute response to SW5 and W8. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Earls Court available 24/7. 25-minute response to SW5 and W8. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 07984 547185.',
     keywords: ['locksmith earls court', 'earls court locksmith', 'locksmith sw5', 'emergency locksmith earls court', '24 hour locksmith earls court'],
     localFacts: [
       'Served by Earls Court station on the District and Piccadilly lines',
@@ -918,7 +918,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '10 minutes from central London',
     metaTitle: 'Islington Locksmith | 24/7 | N1 | 20-Min Response | No Call-Out Fee',
-    metaDescription: 'Local locksmith in Islington available 24/7. 20-minute response to N1. Emergency lockouts, lock changes, burglary repairs. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Islington available 24/7. 20-minute response to N1. Emergency lockouts, lock changes, burglary repairs. No call-out fee. Call 07984 547185.',
     keywords: ['islington locksmith', 'locksmith islington', 'emergency locksmith islington', 'locksmith n1', '24 hour locksmith islington', 'locksmith angel islington'],
     localFacts: [
       'Covered by Angel (Northern Line) and Highbury & Islington (Victoria Line, Overground, Elizabeth Line)',
@@ -951,7 +951,7 @@ export const locations: Location[] = [
     responseTime: '20-25 minutes',
     driveTime: '10 minutes from central London',
     metaTitle: 'Locksmith Old Street | 24/7 | EC1V EC2A | 20-Min Response | No Call-Out Fee',
-    metaDescription: 'Local locksmith near Old Street available 24/7. 20-minute response to EC1V, EC2A, N1. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith near Old Street available 24/7. 20-minute response to EC1V, EC2A, N1. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
     keywords: ['locksmith old street', 'old street locksmith', 'locksmith ec1v', 'emergency locksmith old street', 'locksmith shoreditch', 'locksmith hoxton'],
     localFacts: [
       'Old Street station serves the Northern Line and National Rail',
@@ -984,7 +984,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '15 minutes from central London',
     metaTitle: 'Locksmith Stockwell | 24/7 | SW9 SW8 | 25-Min Response | No Call-Out Fee',
-    metaDescription: 'Local locksmith in Stockwell available 24/7. 25-minute response to SW9 and SW8. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Stockwell available 24/7. 25-minute response to SW9 and SW8. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
     keywords: ['locksmith stockwell', 'stockwell locksmith', 'locksmith sw9', 'emergency locksmith stockwell', '24 hour locksmith stockwell'],
     localFacts: [
       'Stockwell station: Victoria Line and Northern Line',
@@ -1017,7 +1017,7 @@ export const locations: Location[] = [
     responseTime: '25 minutes',
     driveTime: '15 minutes from central London',
     metaTitle: 'Locksmith Highbury | 24/7 | N5 N4 | 25-Min Response | No Call-Out Fee',
-    metaDescription: 'Local locksmith in Highbury available 24/7. 25-minute response to N5 and N4. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Local locksmith in Highbury available 24/7. 25-minute response to N5 and N4. Emergency lockouts, lock changes, UPVC repairs. No call-out fee. Call 07984 547185.',
     keywords: ['locksmith highbury', 'highbury locksmith', 'locksmith n5', 'emergency locksmith highbury', '24 hour locksmith highbury'],
     localFacts: [
       'Served by Highbury & Islington station (Victoria Line, Overground, Elizabeth Line)',

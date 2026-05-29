@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle2, Shield, Clock, Star, ChevronRight, ArrowRight } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
@@ -19,7 +19,7 @@ import type { FAQ } from '@/types'
 export const metadata: Metadata = {
   title: 'Affordable Locksmith London | No Call-Out Fee | From £49 | 24/7',
   description:
-    'Affordable locksmith in London with transparent, fixed prices. Emergency call-outs from £49, no call-out fee, no hidden charges. Available 24/7. Call 020 3900 4444.',
+    'Affordable locksmith in London with transparent, fixed prices. Emergency call-outs from £49, no call-out fee, no hidden charges. Available 24/7. Call 07984 547185.',
   keywords: [
     'affordable locksmith',
     'affordable locksmith london',

@@ -1,4 +1,4 @@
-import type { PostcodeArea } from '@/types'
+﻿import type { PostcodeArea } from '@/types'
 
 export const postcodes: PostcodeArea[] = [
   {
@@ -14,7 +14,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Walthamstow Central Station', 'Walthamstow Market', 'Lloyd Park', 'William Morris Gallery'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith E17 Walthamstow | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Need a locksmith in E17 Walthamstow? Available 24/7, 20-minute response. Emergency lockouts, lock repairs, UPVC. Call 020 3900 4444.',
+    metaDescription: 'Need a locksmith in E17 Walthamstow? Available 24/7, 20-minute response. Emergency lockouts, lock repairs, UPVC. Call 07984 547185.',
   },
   {
     code: 'E10',
@@ -29,7 +29,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Leyton Station', 'Coronation Gardens', 'Leyton Orient FC'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith E10 Leyton | 24/7 | Fast Response | Emergency',
-    metaDescription: 'Locksmith in E10 Leyton available 24/7. Fast 20-minute response. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E10 Leyton available 24/7. Fast 20-minute response. Emergency lockouts, lock changes. Call 07984 547185.',
   },
   {
     code: 'E11',
@@ -44,7 +44,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Leytonstone Station', 'Wanstead Flats', 'Bushwood Area'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith E11 Leytonstone | 24/7 | Fast Response | Emergency',
-    metaDescription: 'Locksmith in E11 Leytonstone available 24/7. Fast 20-minute response. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E11 Leytonstone available 24/7. Fast 20-minute response. Emergency lockouts, UPVC repairs. Call 07984 547185.',
   },
   {
     code: 'E12',
@@ -59,7 +59,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Manor Park Station', 'City of London Cemetery', 'Little Ilford Park'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith E12 Manor Park | 24/7 | Fast Response',
-    metaDescription: 'Locksmith in E12 Manor Park available 24/7. Fast response. Emergency lockouts, lock repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E12 Manor Park available 24/7. Fast response. Emergency lockouts, lock repairs. Call 07984 547185.',
   },
   {
     code: 'E13',
@@ -74,7 +74,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Plaistow Station', 'Queen\'s Market', 'Plaistow Park'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith E13 Plaistow | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in E13 Plaistow available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E13 Plaistow available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 07984 547185.',
   },
   {
     code: 'E15',
@@ -89,7 +89,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Stratford Station', 'Westfield Stratford City', 'Queen Elizabeth Olympic Park'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith E15 Stratford | 24/7 | Fast Response | Olympic Park',
-    metaDescription: 'Locksmith in E15 Stratford available 24/7. Fast response. Near Olympic Park. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E15 Stratford available 24/7. Fast response. Near Olympic Park. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'E6',
@@ -104,7 +104,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['East Ham Station', 'Central Park', 'Gallions Reach Shopping Park'],
     responseTime: '25-30 minutes',
     metaTitle: 'Locksmith E6 East Ham | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in E6 East Ham available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E6 East Ham available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 07984 547185.',
   },
   {
     code: 'E7',
@@ -119,7 +119,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Forest Gate Station', 'Wanstead Flats', 'St Antony\'s Road'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith E7 Forest Gate | 24/7 | Fast Response',
-    metaDescription: 'Locksmith in E7 Forest Gate available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E7 Forest Gate available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'E4',
@@ -134,7 +134,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Chingford Station', 'Epping Forest', 'Queen Elizabeth\'s Hunting Lodge'],
     responseTime: '30-35 minutes',
     metaTitle: 'Locksmith E4 Chingford | 24/7 | Fast Response | Epping Forest',
-    metaDescription: 'Locksmith in E4 Chingford available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in E4 Chingford available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'N17',
@@ -149,7 +149,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Tottenham Hale Station', 'Tottenham Hotspur Stadium', 'Bruce Castle Museum'],
     responseTime: '25-30 minutes',
     metaTitle: 'Locksmith N17 Tottenham | 24/7 | Emergency Locksmith',
-    metaDescription: 'Locksmith in N17 Tottenham available 24/7. Fast response. Emergency lockouts, burglary repair. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in N17 Tottenham available 24/7. Fast response. Emergency lockouts, burglary repair. Call 07984 547185.',
   },
   {
     code: 'N9',
@@ -164,7 +164,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Edmonton Green Station', 'Edmonton Green Shopping Centre', 'Jubilee Park'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith N9 Edmonton | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in N9 Edmonton available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in N9 Edmonton available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'N15',
@@ -179,7 +179,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Seven Sisters Station', 'South Tottenham', 'Chestnuts Park'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith N15 Seven Sisters | 24/7 | Fast Response',
-    metaDescription: 'Locksmith in N15 Seven Sisters available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in N15 Seven Sisters available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'IG1',
@@ -194,7 +194,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Ilford Station', 'The Exchange Ilford', 'Valentines Park'],
     responseTime: '25-30 minutes',
     metaTitle: 'Locksmith IG1 Ilford | 24/7 | Emergency Response | Elizabeth Line',
-    metaDescription: 'Locksmith in IG1 Ilford available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in IG1 Ilford available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 07984 547185.',
   },
   {
     code: 'IG11',
@@ -209,7 +209,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Barking Station', 'Barking Abbey', 'Town Square'],
     responseTime: '25-30 minutes',
     metaTitle: 'Locksmith IG11 Barking | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in IG11 Barking available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in IG11 Barking available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'RM8',
@@ -224,7 +224,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Becontree Heath', 'Valence House Museum', 'Central Park'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith RM8 Dagenham | 24/7 | Fast Response | Emergency',
-    metaDescription: 'Locksmith in RM8 Dagenham available 24/7. Fast response. Emergency lockouts, lock changes. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in RM8 Dagenham available 24/7. Fast response. Emergency lockouts, lock changes. Call 07984 547185.',
   },
   {
     code: 'RM9',
@@ -239,7 +239,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Dagenham Dock Station', 'Thames Road', 'Eastbrookend Country Park'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith RM9 Dagenham | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in RM9 Dagenham available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in RM9 Dagenham available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'UB1',
@@ -254,7 +254,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Southall Station', 'Southall Broadway', 'Guru Nanak Gurdwara'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith UB1 Southall | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in UB1 Southall available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in UB1 Southall available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'UB6',
@@ -269,7 +269,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Greenford Station', 'Horsenden Hill', 'Greenford Retail Park'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith UB6 Greenford | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in UB6 Greenford available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in UB6 Greenford available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'CR4',
@@ -284,7 +284,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Mitcham Junction Station', 'Mitcham Common', 'Cricket Green'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith CR4 Mitcham | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in CR4 Mitcham available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in CR4 Mitcham available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'TW13',
@@ -299,7 +299,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Feltham Station', 'Hanworth Park', 'Centre Feltham'],
     responseTime: '35 minutes',
     metaTitle: 'Locksmith TW13 Feltham | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in TW13 Feltham available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in TW13 Feltham available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'SW16',
@@ -314,7 +314,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Norbury Station', 'Streatham Common', 'Norbury Park'],
     responseTime: '30 minutes',
     metaTitle: 'Locksmith SW16 Norbury Streatham | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in SW16 Norbury and Streatham available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in SW16 Norbury and Streatham available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
   {
     code: 'EN3',
@@ -329,7 +329,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Ponders End Station', 'Lee Valley Park', "King George's Reservoir"],
     responseTime: '30-35 minutes',
     metaTitle: 'Locksmith EN3 Ponders End | 24/7 | Emergency Response',
-    metaDescription: 'Locksmith in EN3 Ponders End available 24/7. Fast response. Emergency lockouts. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in EN3 Ponders End available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
   },
 
   // ── HIGH-PRIORITY POSTCODE EXPANSION ─────────────────────────────────────
@@ -347,7 +347,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Harlesden station', 'Willesden Junction', 'Kensal Green Cemetery', 'Roundwood Park'],
     responseTime: '25-30 minutes',
     metaTitle: 'Locksmith NW10 Harlesden | 24/7 | Emergency Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in NW10 Harlesden available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in NW10 Harlesden available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -363,7 +363,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['London Bridge', 'Borough Market', 'The Shard', 'Tate Modern', 'Waterloo Station', 'Bermondsey Street'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith SE1 Southwark | 24/7 | London Bridge | Fast Response',
-    metaDescription: 'Locksmith in SE1 Southwark, London Bridge, Bermondsey available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in SE1 Southwark, London Bridge, Bermondsey available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -379,7 +379,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Balham station', 'Balham High Road', 'Tooting Bec Common', 'Du Cane Court'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith SW12 Balham | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in SW12 Balham available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in SW12 Balham available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -395,7 +395,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Earls Court station', 'Earls Court Road', 'Old Brompton Road', 'Cromwell Road'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith SW5 Earls Court | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in SW5 Earls Court available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in SW5 Earls Court available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -411,7 +411,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Angel station', 'Upper Street', 'Hoxton Square', 'Chapel Market', 'City Road'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith N1 Islington | 24/7 | Angel | 20-Min Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in N1 Islington, Angel, Hoxton available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in N1 Islington, Angel, Hoxton available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -427,7 +427,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Stockwell station', 'Brixton Road', 'Stockwell Park', 'Larkhall Park'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith SW9 Stockwell | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in SW9 Stockwell available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in SW9 Stockwell available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -443,7 +443,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Highbury & Islington station', 'Highbury Fields', 'Drayton Park', 'Highbury Barn'],
     responseTime: '25 minutes',
     metaTitle: 'Locksmith N5 Highbury | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in N5 Highbury available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in N5 Highbury available 24/7. 25-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -459,7 +459,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Oxford Street', 'Carnaby Street', 'Regent Street', 'Soho Square', 'Marble Arch', 'Bond Street'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith W1 Soho Mayfair | 24/7 | Central London | Fast Response',
-    metaDescription: 'Locksmith in W1 Soho, Mayfair, West End available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in W1 Soho, Mayfair, West End available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -475,7 +475,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['British Museum', 'Kings Cross Station', 'Euston Station', 'Russell Square', 'Chancery Lane'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith WC1 Bloomsbury Holborn | 24/7 | Fast Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in WC1 Bloomsbury, Holborn, Kings Cross available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in WC1 Bloomsbury, Holborn, Kings Cross available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 
   {
@@ -491,7 +491,7 @@ export const postcodes: PostcodeArea[] = [
     landmarks: ['Old Street station', 'Old Street Roundabout', 'Hoxton Square', 'City Road', 'Goswell Road'],
     responseTime: '20-25 minutes',
     metaTitle: 'Locksmith EC1V Old Street | 24/7 | 20-Min Response | No Call-Out Fee',
-    metaDescription: 'Locksmith in EC1V Old Street, Hoxton, Clerkenwell available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 020 3900 4444.',
+    metaDescription: 'Locksmith in EC1V Old Street, Hoxton, Clerkenwell available 24/7. 20-minute response. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
   },
 ]
 

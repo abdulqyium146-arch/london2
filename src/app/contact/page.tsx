@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle2 } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Contact London Locksmith Pro | 24/7 Emergency | 020 3900 4444',
+  title: 'Contact London Locksmith Pro | 24/7 Emergency | 07984 547185',
   description:
-    'Contact London Locksmith Pro for emergency locksmith services. Call 020 3900 4444, WhatsApp, or email. Available 24/7 across all London boroughs.',
+    'Contact London Locksmith Pro for emergency locksmith services. Call 07984 547185, WhatsApp, or email. Available 24/7 across all London boroughs.',
   keywords: ['contact locksmith london', 'locksmith phone number london', 'emergency locksmith contact'],
   alternates: { canonical: 'https://londonlocksmithpro.co.uk/contact' },
 }

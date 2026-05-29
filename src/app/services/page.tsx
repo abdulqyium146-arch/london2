@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   AlertTriangle, Clock, Home, ShieldAlert, DoorOpen, Car,
@@ -22,7 +22,7 @@ const PAGE_URL = `${SEO.siteUrl}/services`
 export const metadata: Metadata = {
   title: 'Locksmith Services London | All Services | 24/7 Emergency',
   description:
-    'Complete range of locksmith services in London. Emergency lockouts, UPVC repairs, burglary repair, smart locks, commercial security. Available 24/7. Call 020 3900 4444.',
+    'Complete range of locksmith services in London. Emergency lockouts, UPVC repairs, burglary repair, smart locks, commercial security. Available 24/7. Call 07984 547185.',
   keywords: ['locksmith services london', 'london locksmith services', 'all locksmith services'],
   alternates: { canonical: PAGE_URL },
 }

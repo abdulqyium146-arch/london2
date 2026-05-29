@@ -1,4 +1,4 @@
-import type { BlogPost } from '@/types'
+﻿import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -213,7 +213,7 @@ After a burglary, upgrading your home security is essential. Our [24/7 residenti
       },
       {
         question: 'How quickly can I get my locks changed after a burglary in London?',
-        answer: 'London Locksmith Pro treats burglary call-outs as emergencies and aims to arrive within 2 hours. We carry high-security replacement locks on all our vehicles. Call 020 3900 4444 immediately after a break-in.',
+        answer: 'London Locksmith Pro treats burglary call-outs as emergencies and aims to arrive within 2 hours. We carry high-security replacement locks on all our vehicles. Call 07984 547185 immediately after a break-in.',
       },
     ],
     relatedPosts: ['anti-snap-locks-guide-london', 'how-much-does-a-locksmith-cost-in-london'],
@@ -365,7 +365,7 @@ Avoid posting on social media that you\'re on holiday or away from home. Burglar
 
 ## 15. Get a Free Security Survey
 
-London Locksmith Pro offers a free security survey for your home. Our locksmiths will identify vulnerabilities and recommend targeted, cost-effective improvements. Call 020 3900 4444 to arrange.
+London Locksmith Pro offers a free security survey for your home. Our locksmiths will identify vulnerabilities and recommend targeted, cost-effective improvements. Call 07984 547185 to arrange.
 
 ---
 

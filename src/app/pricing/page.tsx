@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle2, AlertTriangle, Clock, ChevronRight } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
@@ -14,7 +14,7 @@ import { pricingFaqs } from '@/data/faqs'
 export const metadata: Metadata = {
   title: 'Locksmith Prices London 2025 | Transparent Pricing | No Hidden Fees',
   description:
-    'Clear, transparent locksmith prices in London. Emergency call-outs from £49, lock changes from £80. No call-out fee. Fixed quotes before we start. Call 020 3900 4444.',
+    'Clear, transparent locksmith prices in London. Emergency call-outs from £49, lock changes from £80. No call-out fee. Fixed quotes before we start. Call 07984 547185.',
   keywords: ['locksmith prices london', 'locksmith cost london', 'how much locksmith london 2025'],
   alternates: { canonical: `${SEO.siteUrl}/pricing` },
 }
