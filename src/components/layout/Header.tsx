@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Phone, Menu, X, ChevronDown, MessageCircle, Shield } from 'lucide-react'
+import Image from 'next/image'
+import { Phone, Menu, X, ChevronDown, MessageCircle } from 'lucide-react'
 import { BUSINESS, NAVIGATION } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
@@ -37,14 +38,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-orange-glow group-hover:shadow-orange-glow-lg transition-all duration-300">
-              <Shield className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-base leading-tight">London Locksmith</span>
-              <span className="text-orange-400 text-xs font-semibold leading-tight tracking-wide">PRO</span>
-            </div>
+          <Link href="/" aria-label="London Locksmith Pro — Home">
+            <Image
+              src="/logo.webp"
+              alt="London Locksmith Pro"
+              width={160}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

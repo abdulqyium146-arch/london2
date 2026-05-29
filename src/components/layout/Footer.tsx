@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Phone,
   Mail,
@@ -90,14 +91,14 @@ export function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-orange-glow">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-white font-bold text-lg leading-tight">London Locksmith</div>
-                <div className="text-orange-400 text-xs font-bold tracking-widest">24/7 SERVICE</div>
-              </div>
+            <Link href="/" className="inline-block mb-6" aria-label="London Locksmith Pro — Home">
+              <Image
+                src="/logo.webp"
+                alt="London Locksmith Pro"
+                width={160}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               London&apos;s most trusted emergency locksmith. Available 24/7 across all 32 boroughs
