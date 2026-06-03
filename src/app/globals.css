@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 22 40;
+    --foreground: 248 250 252;
+    --card: 17 24 39;
+    --card-foreground: 248 250 252;
+    --border: 31 41 55;
+    --input: 31 41 55;
+    --primary: 249 115 22;
+    --primary-foreground: 255 255 255;
+    --secondary: 30 58 95;
+    --secondary-foreground: 248 250 252;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+    --accent: 249 115 22;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --ring: 249 115 22;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-gray-800;
+  }
+
+  html {
+    @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-[#0A1628] text-slate-100 font-sans;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight; }
+  h2 { @apply text-3xl md:text-4xl font-bold tracking-tight; }
+  h3 { @apply text-2xl md:text-3xl font-semibold; }
+  h4 { @apply text-xl md:text-2xl font-semibold; }
+  h5 { @apply text-lg md:text-xl font-medium; }
+  h6 { @apply text-base md:text-lg font-medium; }
+
+  p { @apply leading-relaxed; }
+
+  a { @apply transition-colors duration-200; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold text-base shadow-orange-glow hover:shadow-orange-glow-lg transition-all duration-300 hover:scale-105 active:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-orange-500/50 text-orange-400 font-semibold text-base hover:bg-orange-500/10 transition-all duration-200;
+  }
+
+  .btn-call {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg shadow-orange-glow hover:shadow-orange-glow-lg transition-all duration-300 hover:scale-105 active:scale-100;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-semibold transition-all duration-200;
+  }
+
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+
+  .card-solid {
+    @apply bg-[#111827] border border-gray-800 rounded-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .trust-badge {
+    @apply flex items-center gap-2 text-sm font-medium text-slate-300;
+  }
+
+  .emergency-banner {
+    @apply fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 via-orange-600 to-red-600 text-white py-2 px-4 text-center text-sm font-semibold;
+  }
+
+  .nav-link {
+    @apply text-slate-300 hover:text-orange-400 font-medium transition-colors duration-200;
+  }
+
+  .stat-card {
+    @apply text-center p-6 card-glass rounded-2xl;
+  }
+
+  .service-card {
+    @apply card-solid p-6 rounded-2xl hover:border-orange-500/50 hover:shadow-card-hover transition-all duration-300 cursor-pointer group;
+  }
+
+  .location-chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full bg-brand-navy-mid/50 border border-brand-navy-light/30 text-sm text-slate-300 hover:text-orange-400 hover:border-orange-400/50 transition-all duration-200;
+  }
+
+  .faq-item {
+    @apply border border-gray-800 rounded-xl overflow-hidden;
+  }
+
+  .review-card {
+    @apply card-solid p-6 rounded-2xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-success {
+    @apply badge bg-green-500/20 text-green-400 border border-green-500/30;
+  }
+
+  .badge-warning {
+    @apply badge bg-orange-500/20 text-orange-400 border border-orange-500/30;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-500/20 text-blue-400 border border-blue-500/30;
+  }
+
+  .prose-locksmith {
+    @apply prose prose-invert prose-headings:text-white prose-p:text-slate-300 prose-a:text-orange-400 prose-strong:text-white prose-li:text-slate-300 max-w-none;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .gradient-border {
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, rgba(249,115,22,0.5), rgba(30,58,95,0.5)) border-box;
+    border: 1px solid transparent;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+  }
+
+  .glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  50% { box-shadow: 0 0 50px rgba(249, 115, 22, 0.6); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Phone number pulsing ring */
+.phone-ring {
+  position: relative;
+}
+
+.phone-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid rgba(249, 115, 22, 0.5);
+  animation: phoneRing 1.5s ease-out infinite;
+}
+
+@keyframes phoneRing {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* Scroll animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

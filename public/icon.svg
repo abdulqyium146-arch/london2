@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="London Locksmith Pro">
+  <title>London Locksmith Pro</title>
+  <!-- Shield background -->
+  <path d="M16 2L4 7v9c0 7.18 5.16 13.9 12 15.93C22.84 29.9 28 23.18 28 16V7L16 2z" fill="#0A1628"/>
+  <!-- Orange shield accent -->
+  <path d="M16 4.5L6 8.9V16c0 5.95 3.9 11.2 9 13.3V4.5z" fill="#F97316" opacity="0.15"/>
+  <!-- Keyhole circle -->
+  <circle cx="16" cy="13" r="3.5" fill="none" stroke="#F97316" stroke-width="2"/>
+  <!-- Keyhole stem -->
+  <rect x="14.5" y="15" width="3" height="5" rx="1" fill="#F97316"/>
+  <!-- Shield border -->
+  <path d="M16 2L4 7v9c0 7.18 5.16 13.9 12 15.93C22.84 29.9 28 23.18 28 16V7L16 2z" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
