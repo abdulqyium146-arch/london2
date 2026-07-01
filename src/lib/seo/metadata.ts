@@ -101,7 +101,7 @@ export function generateServiceMetadata(service: Service, location?: Location): 
       locale: SEO.locale,
       images: [
         {
-          url: `/images/og-${service.slug}.jpg`,
+          url: `${SEO.siteUrl}${canonicalPath}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: title,
@@ -110,8 +110,11 @@ export function generateServiceMetadata(service: Service, location?: Location): 
     },
     twitter: {
       card: 'summary_large_image',
+      site: SEO.twitterHandle,
+      creator: SEO.twitterHandle,
       title,
       description,
+      images: [`${SEO.siteUrl}${canonicalPath}/opengraph-image`],
     },
     alternates: {
       canonical: `${SEO.siteUrl}${canonicalPath}`,
@@ -146,11 +149,22 @@ export function generateLocationMetadata(location: Location, service?: Service):
       type: 'website',
       siteName: SEO.siteName,
       locale: SEO.locale,
+      images: [
+        {
+          url: `${SEO.siteUrl}${canonicalPath}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
+      site: SEO.twitterHandle,
+      creator: SEO.twitterHandle,
       title,
       description,
+      images: [`${SEO.siteUrl}${canonicalPath}/opengraph-image`],
     },
     alternates: {
       canonical: `${SEO.siteUrl}${canonicalPath}`,
@@ -180,6 +194,15 @@ export function generatePostcodeMetadata(postcode: PostcodeArea): Metadata {
       url: `${SEO.siteUrl}/locksmith-${postcode.slug}`,
       type: 'website',
       siteName: SEO.siteName,
+      locale: SEO.locale,
+      images: [{ url: `${SEO.siteUrl}/locksmith-${postcode.slug}/opengraph-image`, width: 1200, height: 630, alt: postcode.metaTitle }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: SEO.twitterHandle,
+      title: postcode.metaTitle,
+      description: postcode.metaDescription,
+      images: [`${SEO.siteUrl}/locksmith-${postcode.slug}/opengraph-image`],
     },
     alternates: {
       canonical: `${SEO.siteUrl}/locksmith-${postcode.slug}`,
@@ -203,6 +226,15 @@ export function generateStationMetadata(station: Station): Metadata {
       url: `${SEO.siteUrl}/locksmith-near-${station.slug}`,
       type: 'website',
       siteName: SEO.siteName,
+      locale: SEO.locale,
+      images: [{ url: `${SEO.siteUrl}/locksmith-near-${station.slug}/opengraph-image`, width: 1200, height: 630, alt: station.metaTitle }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: SEO.twitterHandle,
+      title: station.metaTitle,
+      description: station.metaDescription,
+      images: [`${SEO.siteUrl}/locksmith-near-${station.slug}/opengraph-image`],
     },
     alternates: {
       canonical: `${SEO.siteUrl}/locksmith-near-${station.slug}`,
@@ -229,6 +261,15 @@ export function generateBlogMetadata(post: {
       publishedTime: post.publishDate,
       siteName: SEO.siteName,
       locale: SEO.locale,
+      images: [{ url: `${SEO.siteUrl}/blog/${post.slug}/opengraph-image`, width: 1200, height: 630, alt: post.metaTitle }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: SEO.twitterHandle,
+      creator: SEO.twitterHandle,
+      title: post.metaTitle,
+      description: post.metaDescription,
+      images: [`${SEO.siteUrl}/blog/${post.slug}/opengraph-image`],
     },
     alternates: {
       canonical: `${SEO.siteUrl}/blog/${post.slug}`,

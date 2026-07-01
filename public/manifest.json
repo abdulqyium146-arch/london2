@@ -3,7 +3,7 @@
   "name": "London Locksmith Pro",
   "short_name": "LocksmithPro",
   "description": "London's emergency locksmith — 24/7, 30-minute response across all 32 boroughs. No call-out fee.",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -12,6 +12,36 @@
   "lang": "en-GB",
   "dir": "ltr",
   "categories": ["utilities", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Call Emergency Locksmith",
+      "short_name": "Call Now",
+      "description": "Call our 24/7 emergency locksmith line",
+      "url": "tel:+447984547185",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Emergency Locksmith",
+      "short_name": "Emergency",
+      "description": "Emergency locksmith service — 30-min response",
+      "url": "/services/emergency-locksmith",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "House Lockout",
+      "short_name": "Locked Out",
+      "description": "Locked out of your house? We can help",
+      "url": "/services/house-lockout",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Contact & Pricing",
+      "short_name": "Pricing",
+      "description": "View locksmith prices and get in touch",
+      "url": "/pricing",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ],
   "icons": [
     {
       "src": "/favicon-16x16.png",
@@ -41,7 +71,13 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "display_override": ["standalone", "minimal-ui"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }

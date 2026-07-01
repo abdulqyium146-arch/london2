@@ -10,6 +10,8 @@ import { generateBaseMetadata } from '@/lib/seo/metadata'
 import {
   generateOrganizationSchema,
   generateWebsiteSchema,
+  generateSiteNavigationSchema,
+  generateServiceAreaSchema,
 } from '@/lib/seo/schema'
 
 const inter = Inter({
@@ -28,7 +30,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const schemas = [generateOrganizationSchema(), generateWebsiteSchema()]
+  const schemas = [
+    generateOrganizationSchema(),
+    generateWebsiteSchema(),
+    generateSiteNavigationSchema(),
+    generateServiceAreaSchema(),
+  ]
 
   return (
     <html lang="en-GB" className={inter.variable}>
@@ -44,12 +51,20 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="format-detection" content="telephone=no" />
 
+        {/* Preload critical assets */}
+        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+
         {/* DNS prefetch + preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+        <link rel="dns-prefetch" href="https://www.trustpilot.com" />
+
+        {/* Alternate formats */}
+        <link rel="alternate" type="application/rss+xml" title="London Locksmith Blog" href="https://londonlocksmith.co/blog/feed.xml" />
 
         {/* Geo tags for local SEO */}
         <meta name="geo.region" content="GB-ENG" />

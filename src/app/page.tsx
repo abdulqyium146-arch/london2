@@ -37,7 +37,7 @@ import { formatDate } from '@/lib/utils'
 export const metadata: Metadata = {
   title: "London's #1 Emergency Locksmith | 24/7 | 30-Min Response | No Call-Out Fee",
   description:
-    "London's most trusted emergency locksmith. 24/7 service, 30-minute response across all 32 boroughs. No call-out fee. Locked out? Call 07984 547185 now.",
+    "London's most trusted emergency locksmith. 24/7 service, 30-minute response across all 32 boroughs. No call-out fee. Locked out? Call +44 7984 547185 now.",
   keywords: [
     'emergency locksmith london',
     'locksmith london',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "London's #1 Emergency Locksmith | 24/7 | 30-Min Response",
     description:
-      "Emergency locksmith available 24/7 across all London boroughs. 30-minute response, no call-out fee. Call 07984 547185.",
+      "Emergency locksmith available 24/7 across all London boroughs. 30-minute response, no call-out fee. Call +44 7984 547185.",
     url: 'https://londonlocksmith.co',
     type: 'website',
     siteName: 'London Locksmith',
@@ -110,7 +110,7 @@ export default function HomePage() {
                 step: '01',
                 title: 'Call Us',
                 description:
-                  'Call 07984 547185 — we answer within 3 rings, 24/7. Tell us your location and the issue.',
+                  'Call +44 7984 547185 — we answer within 3 rings, 24/7. Tell us your location and the issue.',
                 icon: Phone,
                 time: '< 1 min',
                 color: 'from-orange-500/20 to-orange-600/10',

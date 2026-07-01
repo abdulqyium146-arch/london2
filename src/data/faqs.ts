@@ -14,7 +14,7 @@ export const generalFaqs: FAQ[] = [
   {
     question: 'Are your locksmiths available 24/7?',
     answer:
-      'Yes. London Locksmith Pro operates 24 hours a day, 7 days a week, 365 days a year — including Christmas Day, New Year, and all bank holidays. We never close. If you have a locksmith emergency at any time, call 07984 547185 and we\'ll respond immediately.',
+      'Yes. London Locksmith Pro operates 24 hours a day, 7 days a week, 365 days a year — including Christmas Day, New Year, and all bank holidays. We never close. If you have a locksmith emergency at any time, call +44 7984 547185 and we\'ll respond immediately.',
   },
   {
     question: 'Will you damage my door or lock when opening it?',
@@ -67,12 +67,12 @@ export const emergencyFaqs: FAQ[] = [
   {
     question: 'What should I do if I\'m locked out of my house at night?',
     answer:
-      'Call London Locksmith Pro immediately on 07984 547185. We operate 24/7 and will dispatch the nearest locksmith to you. While waiting, stay somewhere warm and safe — ideally a neighbour\'s house or a local cafe. Don\'t attempt to break in yourself as this can cause expensive damage.',
+      'Call London Locksmith Pro immediately on +44 7984 547185. We operate 24/7 and will dispatch the nearest locksmith to you. While waiting, stay somewhere warm and safe — ideally a neighbour\'s house or a local cafe. Don\'t attempt to break in yourself as this can cause expensive damage.',
   },
   {
     question: 'I\'ve been burgled — what should I do first?',
     answer:
-      'First, don\'t enter the property if you think the intruder may still be inside. Call 999 if there\'s an immediate threat. Otherwise, call the police on 101 to report the burglary and get a crime reference number. Then call us on 07984 547185 — we\'ll secure your property within 2 hours.',
+      'First, don\'t enter the property if you think the intruder may still be inside. Call 999 if there\'s an immediate threat. Otherwise, call the police on 101 to report the burglary and get a crime reference number. Then call us on +44 7984 547185 — we\'ll secure your property within 2 hours.',
   },
   {
     question: 'How long does an emergency locksmith take to arrive in London?',

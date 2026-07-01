@@ -22,7 +22,7 @@ const PAGE_URL = `${SEO.siteUrl}/services`
 export const metadata: Metadata = {
   title: 'Locksmith Services London | All Services | 24/7 Emergency',
   description:
-    'Complete range of locksmith services in London. Emergency lockouts, UPVC repairs, burglary repair, smart locks, commercial security. Available 24/7. Call 07984 547185.',
+    'Complete range of locksmith services in London. Emergency lockouts, UPVC repairs, burglary repair, smart locks, commercial security. Available 24/7. Call +44 7984 547185.',
   keywords: ['locksmith services london', 'london locksmith services', 'all locksmith services'],
   alternates: { canonical: PAGE_URL },
 }

@@ -14,7 +14,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Walthamstow Central is the main transport hub for Walthamstow, East London, served by the Victoria Line and London Overground.',
     metaTitle: 'Locksmith Near Walthamstow Central Station | 24/7 | 20-Min Response',
-    metaDescription: 'Need a locksmith near Walthamstow Central station? Available 24/7 with 20-minute response. Emergency lockouts, lock repairs. Call 07984 547185.',
+    metaDescription: 'Need a locksmith near Walthamstow Central station? Available 24/7 with 20-minute response. Emergency lockouts, lock repairs. Call +44 7984 547185.',
     landmarks: ['Walthamstow Market', 'Town Hall', 'Selborne Walk Shopping Centre'],
   },
   {
@@ -30,7 +30,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Stratford is one of East London\'s major transport interchanges, serving the Jubilee, Central, DLR, Elizabeth line, and Overground.',
     metaTitle: 'Locksmith Near Stratford Station | 24/7 | Fast Response | East London',
-    metaDescription: 'Locksmith near Stratford station available 24/7. Fast response. Emergency lockouts, lock repairs. Call 07984 547185.',
+    metaDescription: 'Locksmith near Stratford station available 24/7. Fast response. Emergency lockouts, lock repairs. Call +44 7984 547185.',
     landmarks: ['Westfield Stratford City', 'Queen Elizabeth Olympic Park', 'Theatre Royal'],
   },
   {
@@ -46,7 +46,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Barking station is a major transport hub in East London, connecting multiple tube, overground, and national rail services.',
     metaTitle: 'Locksmith Near Barking Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Barking station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Barking station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Barking Abbey', 'Town Square', 'Vicarage Field'],
   },
   {
@@ -62,7 +62,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'East Ham station serves the East Ham area in the London Borough of Newham.',
     metaTitle: 'Locksmith Near East Ham Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near East Ham station available 24/7. Fast response. Emergency lockouts, lock repairs. Call 07984 547185.',
+    metaDescription: 'Locksmith near East Ham station available 24/7. Fast response. Emergency lockouts, lock repairs. Call +44 7984 547185.',
     landmarks: ['Central Park', 'Newham City Farm', 'East Ham High Street'],
   },
   {
@@ -78,7 +78,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Tottenham Hale is a major transport hub in North London with Victoria Line, Overground, and Greater Anglia connections.',
     metaTitle: 'Locksmith Near Tottenham Hale Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Tottenham Hale station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Tottenham Hale station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Tottenham Hotspur Stadium', 'Tottenham Retail Park', 'Hale Village'],
   },
   {
@@ -94,7 +94,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Seven Sisters station serves the Seven Sisters area in North London with Victoria Line connections.',
     metaTitle: 'Locksmith Near Seven Sisters Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Seven Sisters station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Seven Sisters station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Wards Corner Market', 'South Tottenham', 'Chestnuts Park'],
   },
   {
@@ -110,7 +110,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Ilford station on the Elizabeth line serves the Ilford town centre in East London.',
     metaTitle: 'Locksmith Near Ilford Station | 24/7 | Elizabeth Line | Fast Response',
-    metaDescription: 'Locksmith near Ilford station available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call 07984 547185.',
+    metaDescription: 'Locksmith near Ilford station available 24/7. Fast response. Emergency lockouts, UPVC repairs. Call +44 7984 547185.',
     landmarks: ['The Exchange Ilford', 'Valentines Park', 'Town Hall'],
   },
   {
@@ -126,7 +126,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Dagenham East station on the District Line serves the eastern parts of Dagenham.',
     metaTitle: 'Locksmith Near Dagenham East Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Dagenham East station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Dagenham East station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Central Park', 'Civic Centre', 'Ford Dagenham (historic)'],
   },
   {
@@ -142,7 +142,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Dagenham Heathway station serves the Heathway area of Dagenham, close to the shopping centre.',
     metaTitle: 'Locksmith Near Dagenham Heathway | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Dagenham Heathway station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Dagenham Heathway station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Heathway Shopping Centre', 'Valence House', 'Eastbrookend Park'],
   },
   {
@@ -158,7 +158,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Southall station on the Elizabeth Line and Great Western Railway serves the vibrant Southall area in West London.',
     metaTitle: 'Locksmith Near Southall Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Southall station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Southall station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Southall Broadway', 'Southall Market', 'Guru Nanak Gurdwara'],
   },
   {
@@ -174,7 +174,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Leyton station on the Central Line serves the Leyton residential area in East London.',
     metaTitle: 'Locksmith Near Leyton Station | 24/7 | Fast Response | E10',
-    metaDescription: 'Locksmith near Leyton station available 24/7. Fast response. Emergency lockouts, lock repairs. Call 07984 547185.',
+    metaDescription: 'Locksmith near Leyton station available 24/7. Fast response. Emergency lockouts, lock repairs. Call +44 7984 547185.',
     landmarks: ['Leyton Orient FC', 'Coronation Gardens', 'Leyton Library'],
   },
   {
@@ -190,7 +190,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Leytonstone station on the Central Line serves the Leytonstone area in East London.',
     metaTitle: 'Locksmith Near Leytonstone Station | 24/7 | Fast Response | E11',
-    metaDescription: 'Locksmith near Leytonstone station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Leytonstone station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Hitchcock mural (Alfred Hitchcock birthplace)', 'Wanstead Flats'],
   },
   {
@@ -206,7 +206,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Plaistow station serves the residential Plaistow area in East London.',
     metaTitle: 'Locksmith Near Plaistow Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Plaistow station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Plaistow station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Queen\'s Market', 'Plaistow Park', 'Green Street'],
   },
   {
@@ -222,7 +222,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Mitcham Junction station serves the Mitcham area in South London with Thameslink and Tramlink connections.',
     metaTitle: 'Locksmith Near Mitcham Junction | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Mitcham Junction available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Mitcham Junction available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Mitcham Common', 'Cricket Green', 'Eagle House'],
   },
   {
@@ -238,7 +238,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Greenford station on the Central Line serves the Greenford area in West London.',
     metaTitle: 'Locksmith Near Greenford Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Greenford station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Greenford station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Horsenden Hill', 'Greenford Retail Park', 'Perivale Park'],
   },
   {
@@ -254,7 +254,7 @@ export const stations: Station[] = [
     responseTime: '35 minutes',
     description: 'Feltham station on the South Western Railway serves the Feltham area in West London near Heathrow.',
     metaTitle: 'Locksmith Near Feltham Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Feltham station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Feltham station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['The Centre Feltham', 'Hanworth Park', 'Airparcs Leisure Centre'],
   },
   {
@@ -270,7 +270,7 @@ export const stations: Station[] = [
     responseTime: '30 minutes',
     description: 'Edmonton Green station serves the Edmonton Green shopping area in North London.',
     metaTitle: 'Locksmith Near Edmonton Green Station | 24/7 | Fast Response',
-    metaDescription: 'Locksmith near Edmonton Green station available 24/7. Fast response. Emergency lockouts. Call 07984 547185.',
+    metaDescription: 'Locksmith near Edmonton Green station available 24/7. Fast response. Emergency lockouts. Call +44 7984 547185.',
     landmarks: ['Edmonton Green Shopping Centre', 'Jubilee Park', 'Edmonton Library'],
   },
 
@@ -289,7 +289,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Old Street station serves the Old Street and Shoreditch area, a major business and residential hub in East Central London.',
     metaTitle: 'Locksmith Near Old Street Station | 24/7 | EC1V | 20-Min Response',
-    metaDescription: 'Locksmith near Old Street station available 24/7. 20-minute response to EC1V, Shoreditch, Hoxton. Emergency lockouts. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Old Street station available 24/7. 20-minute response to EC1V, Shoreditch, Hoxton. Emergency lockouts. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Silicon Roundabout', 'Hoxton Square', 'Shoreditch High Street', 'City Road'],
   },
 
@@ -306,7 +306,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Earls Court station is a major West London interchange served by the District and Piccadilly lines.',
     metaTitle: 'Locksmith Near Earls Court Station | 24/7 | SW5 | 25-Min Response',
-    metaDescription: 'Locksmith near Earls Court station available 24/7. 25-minute response to SW5 and W8. Emergency lockouts. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Earls Court station available 24/7. 25-minute response to SW5 and W8. Emergency lockouts. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Earls Court Exhibition Centre', 'Barkston Gardens', 'Pemberton Gardens'],
   },
 
@@ -323,7 +323,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Balham station is a key South London transport hub served by the Northern Line and Southern Rail.',
     metaTitle: 'Locksmith Near Balham Station | 24/7 | SW12 | 25-Min Response',
-    metaDescription: 'Locksmith near Balham station available 24/7. 25-minute response to SW12. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Balham station available 24/7. 25-minute response to SW12. Emergency lockouts, lock changes. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Tooting Bec Common', 'Balham Market', 'Du Cane Court', 'Balham High Road'],
   },
 
@@ -340,7 +340,7 @@ export const stations: Station[] = [
     responseTime: '25 minutes',
     description: 'Stockwell station is a major South London interchange at the junction of the Victoria and Northern lines.',
     metaTitle: 'Locksmith Near Stockwell Station | 24/7 | SW9 | 25-Min Response',
-    metaDescription: 'Locksmith near Stockwell station available 24/7. 25-minute response to SW9. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Stockwell station available 24/7. 25-minute response to SW9. Emergency lockouts, lock changes. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Stockwell Park', 'Larkhall Park', 'Stockwell Memorial'],
   },
 
@@ -357,7 +357,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Angel station serves the Angel and Islington area on the Northern Line.',
     metaTitle: 'Locksmith Near Angel Station | 24/7 | N1 Islington | 20-Min Response',
-    metaDescription: 'Locksmith near Angel station available 24/7. 20-minute response to N1 Islington. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Angel station available 24/7. 20-minute response to N1 Islington. Emergency lockouts, lock changes. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Upper Street', 'Chapel Market', 'Business Design Centre', 'The Angel'],
   },
 
@@ -374,7 +374,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'Highbury & Islington station serves North London on the Victoria Line, London Overground, and Elizabeth Line.',
     metaTitle: 'Locksmith Near Highbury & Islington Station | 24/7 | N5 | 20-Min Response',
-    metaDescription: 'Locksmith near Highbury & Islington station available 24/7. 20-minute response to N5, N1. Emergency lockouts, lock changes. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near Highbury & Islington station available 24/7. 20-minute response to N5, N1. Emergency lockouts, lock changes. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Highbury Fields', 'Emirates Stadium', 'Highbury Corner', 'Highbury Barn'],
   },
 
@@ -391,7 +391,7 @@ export const stations: Station[] = [
     responseTime: '20 minutes',
     description: 'London Bridge station is one of the busiest interchanges in London, serving SE1, Southwark, Bermondsey, and Borough.',
     metaTitle: 'Locksmith Near London Bridge Station | 24/7 | SE1 | 20-Min Response',
-    metaDescription: 'Locksmith near London Bridge station available 24/7. 20-minute response to SE1. Emergency lockouts, key cutting, lock changes. No call-out fee. Call 07984 547185.',
+    metaDescription: 'Locksmith near London Bridge station available 24/7. 20-minute response to SE1. Emergency lockouts, key cutting, lock changes. No call-out fee. Call +44 7984 547185.',
     landmarks: ['Borough Market', 'The Shard', 'Bermondsey Street', 'Southwark Cathedral'],
   },
 ]

@@ -2,19 +2,93 @@
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle2 } from 'lucide-react'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
-import { BUSINESS } from '@/lib/constants'
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
+import { generateWebPageSchema, generateBreadcrumbSchema } from '@/lib/seo/schema'
+import { BUSINESS, SEO } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Contact London Locksmith Pro | 24/7 Emergency | 07984 547185',
+  title: 'Contact London Locksmith Pro | 24/7 Emergency | +44 7984 547185',
   description:
-    'Contact London Locksmith Pro for emergency locksmith services. Call 07984 547185, WhatsApp, or email. Available 24/7 across all London boroughs.',
+    'Contact London Locksmith Pro for emergency locksmith services. Call +44 7984 547185, WhatsApp, or email. Available 24/7 across all London boroughs.',
   keywords: ['contact locksmith london', 'locksmith phone number london', 'emergency locksmith contact'],
-  alternates: { canonical: 'https://londonlocksmith.co/contact' },
+  alternates: { canonical: `${SEO.siteUrl}/contact` },
+  openGraph: {
+    title: 'Contact London Locksmith Pro | 24/7 Emergency | +44 7984 547185',
+    description: 'Contact London Locksmith Pro for emergency locksmith services. Call +44 7984 547185, WhatsApp, or email. Available 24/7 across all London boroughs.',
+    url: `${SEO.siteUrl}/contact`,
+    type: 'website',
+    siteName: SEO.siteName,
+  },
+}
+
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': `${SEO.siteUrl}/contact#webpage`,
+  name: 'Contact London Locksmith Pro',
+  description: 'Contact page for London Locksmith Pro — 24/7 emergency locksmith services.',
+  url: `${SEO.siteUrl}/contact`,
+  inLanguage: 'en-GB',
+  isPartOf: { '@id': `${SEO.siteUrl}/#website` },
+  about: { '@id': `${SEO.siteUrl}/#organization` },
+  mainEntity: {
+    '@type': 'LocalBusiness',
+    '@id': `${SEO.siteUrl}/#organization`,
+    name: BUSINESS.name,
+    telephone: BUSINESS.phone,
+    email: BUSINESS.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.area,
+      addressRegion: BUSINESS.address.city,
+      postalCode: BUSINESS.address.postcode,
+      addressCountry: 'GB',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: BUSINESS.phone,
+        contactType: 'emergency',
+        availableLanguage: 'English',
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '23:59',
+        },
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: BUSINESS.email,
+        availableLanguage: 'English',
+      },
+    ],
+  },
 }
 
 export default function ContactPage() {
+  const schemas = [
+    contactPageSchema,
+    generateWebPageSchema(
+      'Contact London Locksmith Pro | 24/7 Emergency | +44 7984 547185',
+      'Contact London Locksmith Pro for emergency locksmith services. Available 24/7 across all London boroughs.',
+      `${SEO.siteUrl}/contact`,
+      'ContactPage'
+    ),
+    generateBreadcrumbSchema([{ name: 'Home', href: '/' }, { name: 'Contact', href: '/contact' }]),
+  ]
+
   return (
     <>
+      <SchemaMarkup schemas={schemas} />
       {/* Hero */}
       <section className="relative py-20 px-4 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-glow-orange opacity-30" />

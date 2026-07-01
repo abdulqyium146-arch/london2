@@ -54,7 +54,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: 'Emergency Locksmith London | 24/7 | 30-Min Response | No Call-Out Fee',
     metaDescription:
-      'Emergency locksmith in London available 24/7. Average 30-minute response across all boroughs. No call-out fee, transparent pricing. Call 07984 547185 now.',
+      'Emergency locksmith in London available 24/7. Average 30-minute response across all boroughs. No call-out fee, transparent pricing. Call +44 7984 547185 now.',
     keywords: [
       'emergency locksmith london',
       'emergency locksmith near me',
@@ -101,7 +101,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: 'Is there a 24-hour locksmith available in London right now?',
-        answer: 'Yes. London Locksmith Pro operates 24 hours a day, 7 days a week, including bank holidays and Christmas. Call 07984 547185 right now and a locksmith will be dispatched to your location immediately.',
+        answer: 'Yes. London Locksmith Pro operates 24 hours a day, 7 days a week, including bank holidays and Christmas. Call +44 7984 547185 right now and a locksmith will be dispatched to your location immediately.',
       },
       {
         question: 'Do you charge more for night-time call-outs?',
@@ -117,7 +117,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: '24 Hour Locksmith London | Open Now | Night & Day | Call Now',
     metaDescription:
-      '24 hour locksmith in London available right now. Night, day, weekends, bank holidays. 30-minute response across all boroughs. Call 07984 547185.',
+      '24 hour locksmith in London available right now. Night, day, weekends, bank holidays. 30-minute response across all boroughs. Call +44 7984 547185.',
     keywords: [
       '24 hour locksmith london',
       'locksmith open now london',
@@ -154,7 +154,7 @@ export const services: Service[] = [
       'Works with all major home insurers',
     ],
     process: [
-      { step: 1, title: 'Call Our 24/7 Line', description: 'Phone 07984 547185 — we answer within 3 rings any time, day or night.', duration: '< 1 min' },
+      { step: 1, title: 'Call Our 24/7 Line', description: 'Phone +44 7984 547185 — we answer within 3 rings any time, day or night.', duration: '< 1 min' },
       { step: 2, title: 'Free Fixed Quote', description: 'We give you a transparent, fixed price over the phone — no hidden charges.', duration: '2 mins' },
       { step: 3, title: 'Rapid Arrival', description: 'Nearest residential locksmith dispatched immediately, average 30-minute arrival.', duration: '< 30 mins' },
       { step: 4, title: 'Home Secured', description: 'Non-destructive entry, lock repaired or upgraded, property secured.', duration: '20–60 mins' },
@@ -190,7 +190,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: '24/7 Residential Locksmith London | Home Lock Experts | 30-Min Response',
     metaDescription:
-      'Trusted 24/7 residential locksmith in London. Emergency home lockouts, lock repairs, replacements & security upgrades. 30-min response, no call-out fee. Call 07984 547185.',
+      'Trusted 24/7 residential locksmith in London. Emergency home lockouts, lock repairs, replacements & security upgrades. 30-min response, no call-out fee. Call +44 7984 547185.',
     keywords: [
       '24/7 residential locksmith london',
       'residential locksmith london',
@@ -257,7 +257,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: 'House Lockout London | 30-Min Response | 24/7 | No Damage Entry',
     metaDescription:
-      'Locked out of your house in London? We\'ll have you inside in 30 minutes. Non-destructive entry, 24/7, no call-out fee. Call 07984 547185.',
+      'Locked out of your house in London? We\'ll have you inside in 30 minutes. Non-destructive entry, 24/7, no call-out fee. Call +44 7984 547185.',
     keywords: [
       'house lockout london',
       'locked out of house london',
@@ -300,7 +300,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: 'What should I do immediately after a burglary in London?',
-        answer: 'First, don\'t touch anything and call the police to report the crime and get a crime reference number. Then call us on 07984 547185 for emergency burglary repair. Don\'t sleep in the property until it\'s secured — we\'ll come to you within 2 hours, day or night.',
+        answer: 'First, don\'t touch anything and call the police to report the crime and get a crime reference number. Then call us on +44 7984 547185 for emergency burglary repair. Don\'t sleep in the property until it\'s secured — we\'ll come to you within 2 hours, day or night.',
       },
       {
         question: 'Will my insurance cover burglary repair costs?',
@@ -316,7 +316,7 @@ export const services: Service[] = [
     responseTime: '2 hours',
     metaTitle: 'Burglary Repair London | Emergency Break-In Repair | 2-Hour Response',
     metaDescription:
-      'Emergency burglary repair in London. We secure your home within 2 hours of a break-in. Insurance approved, high-security locks installed. Call 07984 547185.',
+      'Emergency burglary repair in London. We secure your home within 2 hours of a break-in. Insurance approved, high-security locks installed. Call +44 7984 547185.',
     keywords: [
       'burglary repair london',
       'break-in repair london',
@@ -375,7 +375,7 @@ export const services: Service[] = [
     responseTime: 'Same day',
     metaTitle: 'UPVC Door Repair London | Same-Day | All Brands & Mechanisms',
     metaDescription:
-      'UPVC door repair in London. Multipoint locks, handles, hinges. Same-day service, all brands. Transparent pricing. Call 07984 547185.',
+      'UPVC door repair in London. Multipoint locks, handles, hinges. Same-day service, all brands. Transparent pricing. Call +44 7984 547185.',
     keywords: [
       'upvc door repair london',
       'upvc lock repair london',
@@ -434,7 +434,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: 'Car Locksmith London | Car Lockout & Key Replacement | 24/7',
     metaDescription:
-      'Car locksmith in London. Locked out of your car? Lost car keys? We come to you 24/7. All makes and models. Call 07984 547185.',
+      'Car locksmith in London. Locked out of your car? Lost car keys? We come to you 24/7. All makes and models. Call +44 7984 547185.',
     keywords: [
       'car locksmith london',
       'car lockout london',
@@ -489,7 +489,7 @@ export const services: Service[] = [
     responseTime: '2-4 hours',
     metaTitle: 'Commercial Locksmith London | Business Security | Access Control',
     metaDescription:
-      'Commercial locksmith services in London. Master key systems, access control, emergency business lockouts. All sectors covered. Call 07984 547185.',
+      'Commercial locksmith services in London. Master key systems, access control, emergency business lockouts. All sectors covered. Call +44 7984 547185.',
     keywords: [
       'commercial locksmith london',
       'business locksmith london',
@@ -543,7 +543,7 @@ export const services: Service[] = [
     responseTime: 'Same day',
     metaTitle: 'Lock Repair London | Same-Day | All Lock Types | No Call-Out Fee',
     metaDescription:
-      'Professional lock repair in London. All lock types. Same-day service. No call-out fee. Transparent pricing. Call 07984 547185.',
+      'Professional lock repair in London. All lock types. Same-day service. No call-out fee. Transparent pricing. Call +44 7984 547185.',
     keywords: ['lock repair london', 'broken lock repair london', 'stiff lock repair london', 'lock mechanism repair london'],
     relatedServices: ['lock-replacement', 'upvc-door-repair', 'emergency-locksmith'],
     emergencyService: false,
@@ -591,7 +591,7 @@ export const services: Service[] = [
     responseTime: 'Same day',
     metaTitle: 'Lock Replacement London | Anti-Snap Locks | Same-Day Service',
     metaDescription:
-      'Lock replacement in London. Anti-snap, high-security upgrades. BS3621 approved. Same-day service, all areas. Call 07984 547185.',
+      'Lock replacement in London. Anti-snap, high-security upgrades. BS3621 approved. Same-day service, all areas. Call +44 7984 547185.',
     keywords: [
       'lock replacement london',
       'lock change london',
@@ -646,7 +646,7 @@ export const services: Service[] = [
     responseTime: 'Booked appointment',
     metaTitle: 'Smart Lock Installation London | Yale, August, Nuki | Professional Fitting',
     metaDescription:
-      'Smart lock installation in London. All major brands. Professional fitting, app setup, smart home integration. Call 07984 547185.',
+      'Smart lock installation in London. All major brands. Professional fitting, app setup, smart home integration. Call +44 7984 547185.',
     keywords: [
       'smart lock installation london',
       'smart lock fitting london',
@@ -694,7 +694,7 @@ export const services: Service[] = [
     responseTime: 'Same day',
     metaTitle: 'Key Cutting London | Mobile | All Key Types | Same Day',
     metaDescription:
-      'Key cutting in London. Standard, security, and vehicle keys cut. Mobile service, same-day. Call 07984 547185.',
+      'Key cutting in London. Standard, security, and vehicle keys cut. Mobile service, same-day. Call +44 7984 547185.',
     keywords: ['key cutting london', 'duplicate keys london', 'spare key cutting london', 'key copy london'],
     relatedServices: ['lock-replacement', 'emergency-locksmith'],
     emergencyService: false,
@@ -738,7 +738,7 @@ export const services: Service[] = [
     responseTime: 'Booked appointment',
     metaTitle: 'Security Upgrades London | Anti-Snap Locks | Free Survey',
     metaDescription:
-      'Home and business security upgrades in London. Free assessment. Anti-snap locks, door reinforcement. Insurance approved. Call 07984 547185.',
+      'Home and business security upgrades in London. Free assessment. Anti-snap locks, door reinforcement. Insurance approved. Call +44 7984 547185.',
     keywords: [
       'security upgrades london',
       'home security london',
@@ -786,7 +786,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: 'Door Opening Service London | 24/7 | All Door Types',
     metaDescription:
-      'Door opening service in London. Can\'t open your door? 24/7 response, all door types. Call 07984 547185.',
+      'Door opening service in London. Can\'t open your door? 24/7 response, all door types. Call +44 7984 547185.',
     keywords: ['door opening london', 'door wont open london', 'jammed door london', 'door opening service london'],
     relatedServices: ['emergency-locksmith', 'upvc-door-repair', 'house-lockout'],
     emergencyService: true,
@@ -832,7 +832,7 @@ export const services: Service[] = [
     responseTime: '30 minutes',
     metaTitle: 'Snapped Key Extraction London | Key Stuck in Lock | 24/7',
     metaDescription:
-      'Snapped key in lock? Our specialists extract broken keys across London 24/7. No lock damage in most cases. Call 07984 547185.',
+      'Snapped key in lock? Our specialists extract broken keys across London 24/7. No lock damage in most cases. Call +44 7984 547185.',
     keywords: [
       'snapped key extraction london',
       'broken key in lock london',
@@ -881,7 +881,7 @@ export const services: Service[] = [
     responseTime: 'Same day',
     metaTitle: 'Safe Locksmith London | Safe Opening & Combination Changes | All Brands',
     metaDescription:
-      'Safe locksmith in London. Locked out of your safe? Lost the combination? We open all safe types. Call 07984 547185.',
+      'Safe locksmith in London. Locked out of your safe? Lost the combination? We open all safe types. Call +44 7984 547185.',
     keywords: ['safe locksmith london', 'safe opening london', 'lost safe combination london', 'safe combination change london'],
     relatedServices: ['commercial-locksmith', 'security-upgrades'],
     emergencyService: false,

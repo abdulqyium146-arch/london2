@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (service && location) {
       return {
         title: `${service.name} ${location.name} | 24/7 | ${location.responseTime} Response`,
-        description: `${service.name} in ${location.name}, ${location.borough}. ${location.responseTime} response, available 24/7. No call-out fee. Fully insured. Call 07984 547185.`,
+        description: `${service.name} in ${location.name}, ${location.borough}. ${location.responseTime} response, available 24/7. No call-out fee. Fully insured. Call +44 7984 547185.`,
         keywords: [
           `${service.name.toLowerCase()} ${location.name.toLowerCase()}`,
           `locksmith ${location.name.toLowerCase()}`,
