@@ -376,7 +376,7 @@ See: [17 Home Security Tips for London Homes in 2026](/blog/home-security-tips-l
       },
       {
         question: 'How quickly can I get my locks changed after a burglary in London?',
-        answer: 'London Locksmith Pro treats burglary call-outs as the highest priority and aims to arrive within 2 hours anywhere in London. We carry high-security replacement locks and boarding materials on all vehicles. Call +44 7984 547185 immediately.',
+        answer: 'London Locksmith Pro treats burglary call-outs as the highest priority and aims to arrive within 2 hours anywhere in London. We carry high-security replacement locks and boarding materials on all vehicles. Call 07984 547185 immediately.',
       },
       {
         question: 'Do I need a crime reference number for insurance?',
@@ -645,7 +645,7 @@ Posting that you're on holiday, away for the weekend, or attending an event tell
 
 Mark valuables with your postcode and house number using a UV pen. Register items on the **Immobilise national property register** (free) — police use this database to return recovered property and support prosecutions.
 
-London Locksmith Pro offers a **free home security survey**. Our locksmiths will assess every door, window, and access point, identify vulnerabilities, and recommend targeted improvements in priority order. Call **+44 7984 547185** to arrange.
+London Locksmith Pro offers a **free home security survey**. Our locksmiths will assess every door, window, and access point, identify vulnerabilities, and recommend targeted improvements in priority order. Call **07984 547185** to arrange.
 
 ---
 

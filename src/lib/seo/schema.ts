@@ -140,14 +140,6 @@ export function generateWebsiteSchema() {
     publisher: {
       '@id': `${BASE_URL}/#organization`,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${BASE_URL}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   }
 }
 
@@ -342,7 +334,6 @@ export function generateHowToSchema(
     '@type': 'HowTo',
     name,
     description,
-    totalTime: 'PT60M',
     step: steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,
@@ -530,56 +521,5 @@ export function generateWebPageSchema(
     inLanguage: 'en-GB',
     isPartOf: { '@id': `${BASE_URL}/#website` },
     about: { '@id': `${BASE_URL}/#organization` },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '.speakable'],
-    },
-  }
-}
-
-export function generateSiteNavigationSchema() {
-  const navItems = [
-    { name: 'Emergency Locksmith', url: `${BASE_URL}/services/emergency-locksmith` },
-    { name: '24 Hour Locksmith', url: `${BASE_URL}/services/24-hour-locksmith` },
-    { name: 'House Lockout', url: `${BASE_URL}/services/house-lockout` },
-    { name: 'Burglary Repair', url: `${BASE_URL}/services/burglary-repair` },
-    { name: 'All Services', url: `${BASE_URL}/services` },
-    { name: 'Locations', url: `${BASE_URL}/locations` },
-    { name: 'Pricing', url: `${BASE_URL}/pricing` },
-    { name: 'Blog', url: `${BASE_URL}/blog` },
-    { name: 'Contact', url: `${BASE_URL}/contact` },
-  ]
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    '@id': `${BASE_URL}/#sitenavigation`,
-    name: 'Site Navigation',
-    itemListElement: navItems.map((item, i) => ({
-      '@type': 'SiteNavigationElement',
-      position: i + 1,
-      name: item.name,
-      url: item.url,
-    })),
-  }
-}
-
-export function generateServiceAreaSchema() {
-  const boroughs = [
-    'City of London', 'Barking and Dagenham', 'Barnet', 'Bexley', 'Brent', 'Bromley',
-    'Camden', 'Croydon', 'Ealing', 'Enfield', 'Greenwich', 'Hackney', 'Hammersmith and Fulham',
-    'Haringey', 'Harrow', 'Havering', 'Hillingdon', 'Hounslow', 'Islington',
-    'Kensington and Chelsea', 'Kingston upon Thames', 'Lambeth', 'Lewisham', 'Merton',
-    'Newham', 'Redbridge', 'Richmond upon Thames', 'Southwark', 'Sutton', 'Tower Hamlets',
-    'Waltham Forest', 'Wandsworth', 'Westminster',
-  ]
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `${BASE_URL}/#organization`,
-    areaServed: boroughs.map((borough) => ({
-      '@type': 'AdministrativeArea',
-      name: borough,
-      containedInPlace: { '@type': 'City', name: 'London', '@id': 'https://www.wikidata.org/wiki/Q84' },
-    })),
   }
 }

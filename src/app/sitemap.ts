@@ -8,14 +8,18 @@ import { blogPosts } from '@/data/blog-posts'
 const BASE_URL = 'https://londonlocksmith.co'
 
 // Fixed date — represents last meaningful content update. Update this on major content changes.
-const PAGES_UPDATED = new Date('2026-05-01')
+const PAGES_UPDATED = new Date('2026-07-01')
 
+// All services with emergencyService: true in the data — gets higher priority in service×location combos.
 const EMERGENCY_SLUGS = new Set([
   'emergency-locksmith',
   '24-hour-locksmith',
+  'residential-locksmith',
   'house-lockout',
   'burglary-repair',
+  'car-locksmith',
   'door-opening',
+  'snapped-key-extraction',
 ])
 
 const HIGH_TRAFFIC_SLUGS = new Set([
@@ -28,9 +32,9 @@ const HIGH_TRAFFIC_SLUGS = new Set([
 // Sitemap index — Next.js generates /sitemap.xml as an index listing all sitemaps below.
 // Sitemap 0: Core / money pages
 // Sitemap 1: Service hub pages + Location hub pages
-// Sitemap 2: Emergency service × location combos (5 × 33 = 165 URLs)
-// Sitemap 3: Standard service × location combos, first batch (6 × 33 = 198 URLs)
-// Sitemap 4: Standard service × location combos, second batch (5 × 33 = 165 URLs)
+// Sitemap 2: Emergency service × location combos (8 × 33 = 264 URLs)
+// Sitemap 3: Standard service × location combos, first batch (4 × 33 = 132 URLs)
+// Sitemap 4: Standard service × location combos, second batch (4 × 33 = 132 URLs)
 // Sitemap 5: Postcode pages + Station pages + Blog posts
 export function generateSitemaps() {
   return [0, 1, 2, 3, 4, 5].map((id) => ({ id }))
@@ -44,15 +48,15 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
         { url: `${BASE_URL}/residential-locksmith-london`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 1.0 },
         { url: `${BASE_URL}/affordable-locksmith-london`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.95 },
         { url: `${BASE_URL}/change-locks-london`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.95 },
-        { url: `${BASE_URL}/services`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.95 },
-        { url: `${BASE_URL}/locations`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.95 },
-        { url: `${BASE_URL}/areas-we-cover`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.9 },
+        { url: `${BASE_URL}/services`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${BASE_URL}/locations`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${BASE_URL}/areas-we-cover`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.85 },
         { url: `${BASE_URL}/contact`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.85 },
         { url: `${BASE_URL}/pricing`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.85 },
         { url: `${BASE_URL}/faq`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.85 },
         { url: `${BASE_URL}/blog`, lastModified: PAGES_UPDATED, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${BASE_URL}/about`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.7 },
-        { url: `${BASE_URL}/html-sitemap`, lastModified: PAGES_UPDATED, changeFrequency: 'monthly', priority: 0.5 },
+        { url: `${BASE_URL}/html-sitemap`, lastModified: PAGES_UPDATED, changeFrequency: 'yearly', priority: 0.1 },
       ]
 
     case 1: {
@@ -121,7 +125,7 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
           url: `${BASE_URL}/locksmith-${postcode.slug}`,
           lastModified: PAGES_UPDATED,
           changeFrequency: 'monthly',
-          priority: 0.8,
+          priority: 0.65,
         })
       }
       for (const station of stations) {

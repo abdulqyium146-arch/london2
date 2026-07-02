@@ -17,7 +17,7 @@ import type { FAQ } from '@/types'
 export const metadata: Metadata = {
   title: 'Change Locks London | Same-Day Lock Change | From £80 | 24/7',
   description:
-    'Professional lock changing service across London. Same-day lock change from £80, available 24/7. After break-in, lost keys, or moving home. No call-out fee. Call +44 7984 547185.',
+    'Professional lock changing service across London. Same-day lock change from £80, available 24/7. After break-in, lost keys, or moving home. No call-out fee. Call 07984 547185.',
   keywords: [
     'change locks london',
     'lock change london',

@@ -29,7 +29,7 @@ const PAGE_URL = `${SEO.siteUrl}/residential-locksmith-london`
 export const metadata: Metadata = {
   title: '24/7 Residential Locksmith London | Home Lock Experts | 30-Min Response',
   description:
-    'Trusted 24/7 residential locksmith in London. Emergency home lockouts, lock repairs, replacements & security upgrades across all 32 boroughs. 30-min response, no call-out fee. Call +44 7984 547185.',
+    'Trusted 24/7 residential locksmith in London. Emergency home lockouts, lock repairs, replacements & security upgrades across all 32 boroughs. 30-min response, no call-out fee. Call 07984 547185.',
   keywords: [
     '24/7 residential locksmith london',
     'residential locksmith london',
@@ -394,7 +394,7 @@ export default function ResidentialLocksmithLondonPage() {
               </h2>
               <div className="space-y-4">
                 {[
-                  { step: '01', title: 'Call Our 24/7 Residential Line', desc: 'Phone +44 7984 547185 any time. Our team answers within 3 rings, around the clock. Tell us your address and the issue — we\'ll take it from there.', time: '< 1 min', color: 'from-orange-500/20 to-orange-600/10', border: 'border-orange-500/20', textColor: 'text-orange-400' },
+                  { step: '01', title: 'Call Our 24/7 Residential Line', desc: 'Phone 07984 547185 any time. Our team answers within 3 rings, around the clock. Tell us your address and the issue — we\'ll take it from there.', time: '< 1 min', color: 'from-orange-500/20 to-orange-600/10', border: 'border-orange-500/20', textColor: 'text-orange-400' },
                   { step: '02', title: 'Receive a Fixed Quote', desc: 'We give you a transparent, fixed price before sending anyone out. No surprises, no hidden charges. You agree the price before the locksmith arrives.', time: '2 mins', color: 'from-blue-500/20 to-blue-600/10', border: 'border-blue-500/20', textColor: 'text-blue-400' },
                   { step: '03', title: 'Locksmith Arrives in 30 Minutes', desc: 'Your nearest residential locksmith is dispatched immediately. Average arrival time is 30 minutes across London, often faster in well-covered areas.', time: '~30 mins', color: 'from-green-500/20 to-green-600/10', border: 'border-green-500/20', textColor: 'text-green-400' },
                   { step: '04', title: 'Home Secured', desc: 'Non-destructive entry, repair or lock upgrade completed on-site. Full documentation provided if required for insurance. 12-month guarantee on all parts.', time: '20–60 mins', color: 'from-purple-500/20 to-purple-600/10', border: 'border-purple-500/20', textColor: 'text-purple-400' },
